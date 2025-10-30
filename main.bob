@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-10-29 15:53:49 by beatr-->
+<!--Saved on 2025-10-30 10:04:40 by root-->
 <display version="2.0.0">
   <name>Display</name>
   <width>1810</width>
@@ -1027,7 +1027,7 @@ elif value>=1:	# 10 mW
     <x>148</x>
     <y>92</y>
     <width>118</width>
-    <height>14</height>
+    <height>15</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="12.0">
       </font>
@@ -1117,7 +1117,7 @@ elif value>=1:	# 10 mW
     <x>535</x>
     <y>92</y>
     <width>118</width>
-    <height>14</height>
+    <height>15</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="12.0">
       </font>
@@ -1207,7 +1207,7 @@ elif value>=1:	# 10 mW
     <x>928</x>
     <y>92</y>
     <width>118</width>
-    <height>14</height>
+    <height>15</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="12.0">
       </font>
@@ -1297,7 +1297,7 @@ elif value>=1:	# 10 mW
     <x>1314</x>
     <y>93</y>
     <width>118</width>
-    <height>14</height>
+    <height>15</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="12.0">
       </font>
