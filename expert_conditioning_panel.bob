@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-07-17 12:49:17 by beatr-->
+<display version="2.0.0">
+  <name>Display</name>
+  <width>796</width>
+  <height>184</height>
+  <widget type="group" version="3.0.0">
+    <name>Expert Panel:$(CONDITIONING_IOC)</name>
+    <width>796</width>
+    <height>184</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="26" green="51" blue="153">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="table" version="2.0.0">
+      <name>Expert_Vacuum_table</name>
+      <y>10</y>
+      <width>280</width>
+      <height>140</height>
+      <background_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </background_color>
+      <columns>
+        <column>
+          <name>VACUUM PUMPS</name>
+          <width>130</width>
+          <editable>true</editable>
+        </column>
+        <column>
+          <name>VACUUM THR [mbar]</name>
+          <width>150</width>
+          <editable>true</editable>
+        </column>
+      </columns>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+from array import array
+
+tsh_array = PVUtil.getDoubleArray(pvs[0])
+labels=PVUtil.getStringArray(pvs[1])
+formatted_data = []
+
+for i, value in enumerate(tsh_array):
+    label = labels[i]
+    formatted_data.append([label,str(value)]) 
+widget.setValue(formatted_data)
+
+]]></text>
+          <pv_name>$(CONDITIONING_IOC):VACUUM_TSH</pv_name>
+          <pv_name>$(CONDITIONING_IOC):VACUUM_PUMPS</pv_name>
+        </script>
+        <script file="EmbeddedPy">
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+from array import array
+
+boolean_value=PVUtil.getDouble(pvs[0])
+if boolean_value==0: 
+      pass
+else:
+	updated_data = widget.getValue() 
+	new_values = []
+	for row in updated_data:
+		value = float(row[1])
+       	 	new_values.append(value)
+	PVUtil.writePV(str(pvs[1]), array('d',new_values),1)]]></text>
+          <pv_name>loc://$(trigger_apply_table)</pv_name>
+          <pv_name trigger="false">$(CONDITIONING_IOC):VACUUM_TSH</pv_name>
+        </script>
+      </scripts>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Apply Table Button</name>
+      <pv_name>loc://$(trigger_apply_table)</pv_name>
+      <x>300</x>
+      <y>23</y>
+      <width>115</width>
+      <height>34</height>
+      <off_label>Apply Table</off_label>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+      <on_label>Apply Table</on_label>
+      <on_color>
+        <color red="0" green="234" blue="255">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <mode>1</mode>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Hysteresis_Label</name>
+      <text>Hysteresis:</text>
+      <x>427</x>
+      <y>3</y>
+      <width>70</width>
+      <height>16</height>
+      <foreground_color>
+        <color red="51" green="26" blue="128">
+        </color>
+      </foreground_color>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Intlk Hysteresis</name>
+      <pv_name>$(CONDITIONING_IOC):INTLK_HYSTERESIS</pv_name>
+      <x>427</x>
+      <y>23</y>
+      <width>116</width>
+      <height>34</height>
+      <format>1</format>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Power Raise</name>
+      <x>280</x>
+      <y>70</y>
+      <width>491</width>
+      <height>88</height>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Power Raise Step_Label</name>
+      <text>Power raise step [kW]:</text>
+      <x>612</x>
+      <y>87</y>
+      <width>141</width>
+      <height>16</height>
+      <foreground_color>
+        <color red="51" green="26" blue="128">
+        </color>
+      </foreground_color>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Conditioning Target</name>
+      <pv_name>$(CONDITIONING_IOC):CONDITIONING_TARGET</pv_name>
+      <x>300</x>
+      <y>105</y>
+      <width>116</width>
+      <height>34</height>
+      <format>1</format>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Conditioning_target_Label</name>
+      <text>Cond. target [MW]:</text>
+      <x>300</x>
+      <y>87</y>
+      <width>118</width>
+      <height>16</height>
+      <foreground_color>
+        <color red="51" green="26" blue="128">
+        </color>
+      </foreground_color>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Power Raise Wait_Label</name>
+      <text>Power raise wait [min]:</text>
+      <x>456</x>
+      <y>87</y>
+      <width>141</width>
+      <height>16</height>
+      <foreground_color>
+        <color red="51" green="26" blue="128">
+        </color>
+      </foreground_color>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Power Raise Wait</name>
+      <pv_name>$(CONDITIONING_IOC):POWER_RAISE_WAIT</pv_name>
+      <x>456</x>
+      <y>107</y>
+      <width>116</width>
+      <height>34</height>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Power Raise Step</name>
+      <pv_name>$(CONDITIONING_IOC):POWER_RAISE_STEP</pv_name>
+      <x>612</x>
+      <y>107</y>
+      <width>116</width>
+      <height>34</height>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+  </widget>
+</display>
