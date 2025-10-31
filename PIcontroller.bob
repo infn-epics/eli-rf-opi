@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-07-23 17:49:39 by marco-->
+<!--Saved on 2025-10-31 10:42:22 by root-->
 <display version="2.0.0">
   <name>Display</name>
   <width>240</width>
-  <height>451</height>
+  <height>591</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -24,7 +24,7 @@
     <auto_size>true</auto_size>
   </widget>
   <widget type="group" version="3.0.0">
-    <name>SPARC:LLRF1</name>
+    <name>LEL-RF-LLRF01</name>
     <y>31</y>
     <width>240</width>
     <height>139</height>
@@ -65,7 +65,7 @@
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>KpAmp1</name>
-      <pv_name>SPARC:LLRF1:vm:dsp:pi_amp:kp</pv_name>
+      <pv_name>LEL-RF-LLRF01:vm:dsp:pi_amp:kp</pv_name>
       <x>33</x>
       <y>18</y>
       <width>70</width>
@@ -74,7 +74,7 @@
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>KpPh1</name>
-      <pv_name>SPARC:LLRF1:vm:dsp:pi_ph:kp</pv_name>
+      <pv_name>LEL-RF-LLRF01:vm:dsp:pi_ph:kp</pv_name>
       <x>131</x>
       <y>18</y>
       <width>70</width>
@@ -83,7 +83,7 @@
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>KiPh1</name>
-      <pv_name>SPARC:LLRF1:vm:dsp:pi_ph:ki</pv_name>
+      <pv_name>LEL-RF-LLRF01:vm:dsp:pi_ph:ki</pv_name>
       <x>131</x>
       <y>65</y>
       <width>70</width>
@@ -98,7 +98,7 @@
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>KiAmp1</name>
-      <pv_name>SPARC:LLRF1:vm:dsp:pi_amp:ki</pv_name>
+      <pv_name>LEL-RF-LLRF01:vm:dsp:pi_amp:ki</pv_name>
       <x>33</x>
       <y>65</y>
       <width>70</width>
@@ -127,7 +127,7 @@
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
-    <name>SPARC:LLRF2</name>
+    <name>LEL-RF-LLRF02</name>
     <y>170</y>
     <width>240</width>
     <height>140</height>
@@ -168,7 +168,7 @@
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>KpAmp2</name>
-      <pv_name>SPARC:LLRF2:vm:dsp:pi_amp:kp</pv_name>
+      <pv_name>LEL-RF-LLRF02:vm:dsp:pi_amp:kp</pv_name>
       <x>33</x>
       <y>19</y>
       <width>70</width>
@@ -177,7 +177,7 @@
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>KpPh2</name>
-      <pv_name>SPARC:LLRF2:vm:dsp:pi_ph:kp</pv_name>
+      <pv_name>LEL-RF-LLRF02:vm:dsp:pi_ph:kp</pv_name>
       <x>131</x>
       <y>19</y>
       <width>70</width>
@@ -186,7 +186,7 @@
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>KiPh2</name>
-      <pv_name>SPARC:LLRF2:vm:dsp:pi_ph:ki</pv_name>
+      <pv_name>LEL-RF-LLRF02:vm:dsp:pi_ph:ki</pv_name>
       <x>131</x>
       <y>66</y>
       <width>70</width>
@@ -201,7 +201,7 @@
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>KiAmp2</name>
-      <pv_name>SPARC:LLRF2:vm:dsp:pi_amp:ki</pv_name>
+      <pv_name>LEL-RF-LLRF02:vm:dsp:pi_amp:ki</pv_name>
       <x>33</x>
       <y>66</y>
       <width>70</width>
@@ -230,7 +230,7 @@
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
-    <name>SPARC:LLRF3</name>
+    <name>LEL-RF-LLRF03</name>
     <y>310</y>
     <width>240</width>
     <height>141</height>
@@ -271,7 +271,7 @@
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>KpAmp3</name>
-      <pv_name>SPARC:LLRF3:vm:dsp:pi_amp:kp</pv_name>
+      <pv_name>LEL-RF-LLRF03:vm:dsp:pi_amp:kp</pv_name>
       <x>33</x>
       <y>20</y>
       <width>70</width>
@@ -280,7 +280,7 @@
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>KpPh3</name>
-      <pv_name>SPARC:LLRF3:vm:dsp:pi_ph:kp</pv_name>
+      <pv_name>LEL-RF-LLRF03:vm:dsp:pi_ph:kp</pv_name>
       <x>131</x>
       <y>20</y>
       <width>70</width>
@@ -289,7 +289,7 @@
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>KiPh3</name>
-      <pv_name>SPARC:LLRF3:vm:dsp:pi_ph:ki</pv_name>
+      <pv_name>LEL-RF-LLRF03:vm:dsp:pi_ph:ki</pv_name>
       <x>131</x>
       <y>67</y>
       <width>70</width>
@@ -304,7 +304,7 @@
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>KiAmp3</name>
-      <pv_name>SPARC:LLRF3:vm:dsp:pi_amp:ki</pv_name>
+      <pv_name>LEL-RF-LLRF03:vm:dsp:pi_amp:ki</pv_name>
       <x>33</x>
       <y>67</y>
       <width>70</width>
@@ -313,6 +313,109 @@
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_18</name>
+      <class>COMMENT</class>
+      <text>Phase</text>
+      <x>146</x>
+      <y>3</y>
+      <width>40</width>
+      <height>16</height>
+      <font use_class="true">
+        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color use_class="true">
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <transparent use_class="true">true</transparent>
+      <auto_size>true</auto_size>
+      <wrap_words use_class="true">true</wrap_words>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>LEL-RF-LLRF04</name>
+    <y>450</y>
+    <width>240</width>
+    <height>141</height>
+    <foreground_color>
+      <color red="153" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="153" green="0" blue="0">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_22</name>
+      <text>Kp</text>
+      <x>11</x>
+      <y>30</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_23</name>
+      <class>COMMENT</class>
+      <text>Amplitude</text>
+      <x>36</x>
+      <y>3</y>
+      <width>63</width>
+      <height>16</height>
+      <font use_class="true">
+        <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
+        </font>
+      </font>
+      <foreground_color use_class="true">
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <transparent use_class="true">true</transparent>
+      <auto_size>true</auto_size>
+      <wrap_words use_class="true">true</wrap_words>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>KpAmp3_1</name>
+      <pv_name>LEL-RF-LLRF04:vm:dsp:pi_amp:kp</pv_name>
+      <x>33</x>
+      <y>20</y>
+      <width>70</width>
+      <height>40</height>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>KpPh3_1</name>
+      <pv_name>LEL-RF-LLRF04:vm:dsp:pi_ph:kp</pv_name>
+      <x>131</x>
+      <y>20</y>
+      <width>70</width>
+      <height>40</height>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>KiPh3_1</name>
+      <pv_name>LEL-RF-LLRF04:vm:dsp:pi_ph:ki</pv_name>
+      <x>131</x>
+      <y>67</y>
+      <width>70</width>
+      <height>40</height>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_24</name>
+      <text>Ki</text>
+      <x>11</x>
+      <y>78</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>KiAmp3_1</name>
+      <pv_name>LEL-RF-LLRF04:vm:dsp:pi_amp:ki</pv_name>
+      <x>33</x>
+      <y>67</y>
+      <width>70</width>
+      <height>40</height>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_25</name>
       <class>COMMENT</class>
       <text>Phase</text>
       <x>146</x>
