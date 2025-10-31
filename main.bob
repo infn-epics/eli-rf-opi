@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-10-31 13:16:05 by root-->
+<!--Saved on 2025-10-31 13:37:46 by beatriceserenellini-->
 <display version="2.0.0">
   <name>Display</name>
-  <width>1810</width>
-  <height>302</height>
+  <width>1880</width>
+  <height>748</height>
   <grid_color>
     <color red="102" green="102" blue="102">
     </color>
   </grid_color>
+  <widget type="picture" version="2.0.0">
+    <name>Picture_1</name>
+    <file>eli-layout.png</file>
+    <y>22</y>
+    <width>1880</width>
+    <height>726</height>
+  </widget>
   <widget type="action_button" version="3.0.0">
     <name>LLRFS1_panel</name>
     <actions>
       <action type="open_display">
-        <description>Open Display</description>
         <file>LLRF_panel.bob</file>
         <macros>
           <LLRF_NAME>LEL-RF-LLRF01</LLRF_NAME>
@@ -31,13 +37,14 @@
           <conditioning>CONDITIONING01</conditioning>
         </macros>
         <target>window</target>
+        <description>Open Display</description>
       </action>
     </actions>
     <text>LLRF1</text>
-    <x>21</x>
-    <y>94</y>
-    <width>114</width>
-    <height>40</height>
+    <x>60</x>
+    <y>104</y>
+    <width>106</width>
+    <height>45</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -48,7 +55,6 @@
     <name>LLRFS3_panel</name>
     <actions>
       <action type="open_display">
-        <description>Open Display</description>
         <file>LLRF_panel.bob</file>
         <macros>
           <LLRF_NAME>LEL-RF-LLRF03</LLRF_NAME>
@@ -67,6 +73,7 @@
           <conditioning>CONDITIONING03</conditioning>
         </macros>
         <target>window</target>
+        <description>Open Display</description>
       </action>
     </actions>
     <text>LLRF3</text>
@@ -84,7 +91,6 @@
     <name>LLRFS2_panel</name>
     <actions>
       <action type="open_display">
-        <description>Open Display</description>
         <file>LLRF_panel.bob</file>
         <macros>
           <LLRF_NAME>LEL-RF-LLRF02</LLRF_NAME>
@@ -103,11 +109,12 @@
           <conditioning>CONDITIONING02</conditioning>
         </macros>
         <target>window</target>
+        <description>Open Display</description>
       </action>
     </actions>
     <text>LLRF2</text>
-    <x>384</x>
-    <y>93</y>
+    <x>472</x>
+    <y>107</y>
     <width>114</width>
     <height>40</height>
     <font>
@@ -120,7 +127,6 @@
     <name>LLRFC_panel</name>
     <actions>
       <action type="open_display">
-        <description>Open Display</description>
         <file>LLRF_panel.bob</file>
         <macros>
           <LLRF_NAME>LEL-RF-LLRF04</LLRF_NAME>
@@ -139,6 +145,7 @@
           <conditioning>CONDITIONING04</conditioning>
         </macros>
         <target>window</target>
+        <description>Open Display</description>
       </action>
     </actions>
     <text>LLRF4</text>
@@ -162,9 +169,9 @@
             <name>LLRFs_panel</name>
             <actions>
               <action type="open_display">
-                <description>Open Display</description>
                 <file>LLRFs_panel.bob</file>
                 <target>window</target>
+                <description>Open Display</description>
               </action>
             </actions>
             <text>LLRFs control panel</text>
@@ -186,7 +193,6 @@
             <name>Open waveform line 1</name>
             <actions>
               <action type="open_display">
-                <description>Waveform 1</description>
                 <file>waveform.bob</file>
                 <macros>
                   <LLRF_NAME>LEL-RF-LLRF01</LLRF_NAME>
@@ -210,6 +216,7 @@
                   <power6>power6:LLRF1</power6>
                 </macros>
                 <target>window</target>
+                <description>Waveform 1</description>
               </action>
             </actions>
             <x>8</x>
@@ -226,7 +233,6 @@
             <name>Open waveform line 2</name>
             <actions>
               <action type="open_display">
-                <description>Waveform 2</description>
                 <file>waveform.bob</file>
                 <macros>
                   <LLRF_NAME>LEL-RF-LLRF02</LLRF_NAME>
@@ -250,6 +256,7 @@
                   <power6>power6:LLRF2</power6>
                 </macros>
                 <target>window</target>
+                <description>Waveform 2</description>
               </action>
             </actions>
             <x>109</x>
@@ -266,7 +273,6 @@
             <name>Open waveform line 3</name>
             <actions>
               <action type="open_display">
-                <description>Waveform 3</description>
                 <file>waveform.bob</file>
                 <macros>
                   <LLRF_NAME>LEL-RF-LLRF03</LLRF_NAME>
@@ -290,6 +296,7 @@
                   <power6>power7:LLRF3</power6>
                 </macros>
                 <target>window</target>
+                <description>Waveform 3</description>
               </action>
             </actions>
             <x>210</x>
@@ -306,7 +313,6 @@
             <name>Open waveform line 4</name>
             <actions>
               <action type="open_display">
-                <description>Waveform 4</description>
                 <file>waveform.bob</file>
                 <macros>
                   <LLRF_NAME>LEL-RF-LLRF04</LLRF_NAME>
@@ -330,6 +336,7 @@
                   <power6>power6:LLRF3</power6>
                 </macros>
                 <target>window</target>
+                <description>Waveform 4</description>
               </action>
             </actions>
             <x>311</x>
@@ -346,7 +353,6 @@
             <name>CONDITIONING 1</name>
             <actions>
               <action type="open_display">
-                <description>Open Display</description>
                 <file>conditioning_panel.bob</file>
                 <macros>
                   <CONDITIONING_IOC>ELI:RF:CONDITIONING01</CONDITIONING_IOC>
@@ -373,6 +379,7 @@
                   <PUMP13>VAC:GUNVPC:GUNSIP01</PUMP13>
                 </macros>
                 <target>window</target>
+                <description>Open Display</description>
               </action>
             </actions>
             <text>Conditioning 
@@ -391,7 +398,6 @@
             <name>CONDITIONING 2</name>
             <actions>
               <action type="open_display">
-                <description>Open Display</description>
                 <file>conditioning_panel.bob</file>
                 <macros>
                   <CONDITIONING_IOC>ELI:RF:CONDITIONING02</CONDITIONING_IOC>
@@ -418,6 +424,7 @@
                   <PUMP13>VAC:GACVPC:AC2SIP01</PUMP13>
                 </macros>
                 <target>window</target>
+                <description>Open Display</description>
               </action>
             </actions>
             <text>Conditioning 
@@ -436,7 +443,6 @@
             <name>CONDITIONING 3</name>
             <actions>
               <action type="open_display">
-                <description>Open Display</description>
                 <file>conditioning_panel.bob</file>
                 <macros>
                   <CONDITIONING_IOC>ELI:RF:CONDITIONING03</CONDITIONING_IOC>
@@ -463,6 +469,7 @@
                   <PUMP13>VAC:AC3VPC:AC3SIP04</PUMP13>
                 </macros>
                 <target>window</target>
+                <description>Open Display</description>
               </action>
             </actions>
             <text>Conditioning 
@@ -481,7 +488,6 @@
             <name>CONDITIONING 4</name>
             <actions>
               <action type="open_display">
-                <description>Open Display</description>
                 <file>conditioning_panel.bob</file>
                 <macros>
                   <CONDITIONING_IOC>ELI:RF:CONDITIONING04</CONDITIONING_IOC>
@@ -508,6 +514,7 @@
                   <PUMP13>VAC:AC3VPC:AC3SIP04</PUMP13>
                 </macros>
                 <target>window</target>
+                <description>Open Display</description>
               </action>
             </actions>
             <text>Conditioning 
@@ -531,9 +538,9 @@
             <name>PI controller</name>
             <actions>
               <action type="open_display">
-                <description>PI controller</description>
                 <file>PIcontroller.bob</file>
                 <target>window</target>
+                <description>PI controller</description>
               </action>
             </actions>
             <x>8</x>
@@ -554,7 +561,6 @@
             <name>Pulse shape LLRF1</name>
             <actions>
               <action type="open_display">
-                <description>Open Display</description>
                 <file>Pulse_shape.bob</file>
                 <macros>
                   <LLRF_NAME>SPARC:LLRF1</LLRF_NAME>
@@ -606,6 +612,7 @@
                   <apply_pulse_shape>apply_pulse_shape:LLRF1</apply_pulse_shape>
                 </macros>
                 <target>window</target>
+                <description>Open Display</description>
               </action>
             </actions>
             <text>Pulse shape LLRF1</text>
@@ -626,7 +633,6 @@
             <name>Pulse shape LLRF2</name>
             <actions>
               <action type="open_display">
-                <description>Open Display</description>
                 <file>Pulse_shape.bob</file>
                 <macros>
                   <LLRF_NAME>LEL-RF-LLRF02</LLRF_NAME>
@@ -678,6 +684,7 @@
                   <apply_pulse_shape>apply_pulse_shape:LLRF2</apply_pulse_shape>
                 </macros>
                 <target>window</target>
+                <description>Open Display</description>
               </action>
             </actions>
             <text>Pulse shape LLRF2</text>
@@ -698,7 +705,6 @@
             <name>Pulse shape LLRF3</name>
             <actions>
               <action type="open_display">
-                <description>Open Display</description>
                 <file>Pulse_shape.bob</file>
                 <macros>
                   <LLRF_NAME>LEL-RF-LLRF03</LLRF_NAME>
@@ -750,6 +756,7 @@
                   <apply_pulse_shape>apply_pulse_shape:LLRF3</apply_pulse_shape>
                 </macros>
                 <target>window</target>
+                <description>Open Display</description>
               </action>
             </actions>
             <text>Pulse shape LLRF3</text>
@@ -770,7 +777,6 @@
             <name>Pulse shape LLRF4</name>
             <actions>
               <action type="open_display">
-                <description>Open Display</description>
                 <file>Pulse_shape.bob</file>
                 <macros>
                   <LLRF_NAME>LEL-RF-LLRF04</LLRF_NAME>
@@ -822,6 +828,7 @@
                   <apply_pulse_shape>apply_pulse_shape:LLRF4</apply_pulse_shape>
                 </macros>
                 <target>window</target>
+                <description>Open Display</description>
               </action>
             </actions>
             <text>Pulse shape LLRF4</text>
@@ -961,8 +968,8 @@
   <widget type="progressbar" version="2.0.0">
     <name>Progress Bar_1</name>
     <pv_name>LEL-RF-LLRF01:ad2:ch7:amp_average_s.AVERAGE</pv_name>
-    <x>149</x>
-    <y>111</y>
+    <x>181</x>
+    <y>126</y>
     <width>118</width>
     <scripts>
       <script file="EmbeddedPy">
@@ -988,8 +995,8 @@ elif value>=1:	# 10 mW
   <widget type="label" version="2.0.0">
     <name>LLRF1 Output Level_Label</name>
     <text>LLRF1 Output Level</text>
-    <x>151</x>
-    <y>93</y>
+    <x>183</x>
+    <y>108</y>
     <width>114</width>
     <height>15</height>
     <font>
@@ -1002,7 +1009,6 @@ elif value>=1:	# 10 mW
     <name>Open Waveform VM1</name>
     <actions>
       <action type="open_display">
-        <description>Open statistic panel</description>
         <file>RF_channel.bob</file>
         <macros>
           <LLRF_NAME>LEL-RF-LLRF01</LLRF_NAME>
@@ -1030,6 +1036,7 @@ elif value>=1:	# 10 mW
           <freq>freq(2856000000)</freq>
         </macros>
         <target>window</target>
+        <description>Open statistic panel</description>
       </action>
     </actions>
     <text></text>
@@ -1092,7 +1099,6 @@ elif value>=1:	# 10 mW
     <name>Open Waveform VM2</name>
     <actions>
       <action type="open_display">
-        <description>Open statistic panel</description>
         <file>RF_channel.bob</file>
         <macros>
           <LLRF_NAME>LEL-RF-LLRF02</LLRF_NAME>
@@ -1120,6 +1126,7 @@ elif value>=1:	# 10 mW
           <freq>freq(2856000000)</freq>
         </macros>
         <target>window</target>
+        <description>Open statistic panel</description>
       </action>
     </actions>
     <text></text>
@@ -1182,7 +1189,6 @@ elif value>=1:	# 10 mW
     <name>Open Waveform VM3</name>
     <actions>
       <action type="open_display">
-        <description>Open statistic panel</description>
         <file>RF_channel.bob</file>
         <macros>
           <LLRF_NAME>LEL-RF-LLRF03</LLRF_NAME>
@@ -1210,6 +1216,7 @@ elif value>=1:	# 10 mW
           <freq>freq(2856000000)</freq>
         </macros>
         <target>window</target>
+        <description>Open statistic panel</description>
       </action>
     </actions>
     <text></text>
@@ -1272,7 +1279,6 @@ elif value>=1:	# 10 mW
     <name>Open Waveform VM4</name>
     <actions>
       <action type="open_display">
-        <description>Open statistic panel</description>
         <file>RF_channel.bob</file>
         <macros>
           <LLRF_NAME>LEL-RF-LLRF04</LLRF_NAME>
@@ -1300,6 +1306,7 @@ elif value>=1:	# 10 mW
           <freq>freq(2856000000)</freq>
         </macros>
         <target>window</target>
+        <description>Open statistic panel</description>
       </action>
     </actions>
     <text></text>
@@ -2757,5 +2764,12 @@ if value == "HV ON:
         </color>
       </line_color>
     </widget>
+  </widget>
+  <widget type="picture" version="2.0.0">
+    <name>Picture</name>
+    <x>400</x>
+    <y>400</y>
+    <width>170</width>
+    <height>1</height>
   </widget>
 </display>
