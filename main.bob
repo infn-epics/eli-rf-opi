@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-10-31 11:11:31 by root-->
+<!--Saved on 2025-10-31 13:16:05 by root-->
 <display version="2.0.0">
   <name>Display</name>
   <width>1810</width>
@@ -34,8 +34,8 @@
       </action>
     </actions>
     <text>LLRF1</text>
-    <x>20</x>
-    <y>93</y>
+    <x>21</x>
+    <y>94</y>
     <width>114</width>
     <height>40</height>
     <font>
@@ -70,7 +70,7 @@
       </action>
     </actions>
     <text>LLRF3</text>
-    <x>801</x>
+    <x>777</x>
     <y>93</y>
     <width>114</width>
     <height>40</height>
@@ -106,7 +106,7 @@
       </action>
     </actions>
     <text>LLRF2</text>
-    <x>408</x>
+    <x>384</x>
     <y>93</y>
     <width>114</width>
     <height>40</height>
@@ -142,7 +142,7 @@
       </action>
     </actions>
     <text>LLRF4</text>
-    <x>1187</x>
+    <x>1163</x>
     <y>94</y>
     <width>114</width>
     <height>40</height>
@@ -961,8 +961,8 @@
   <widget type="progressbar" version="2.0.0">
     <name>Progress Bar_1</name>
     <pv_name>LEL-RF-LLRF01:ad2:ch7:amp_average_s.AVERAGE</pv_name>
-    <x>148</x>
-    <y>110</y>
+    <x>149</x>
+    <y>111</y>
     <width>118</width>
     <scripts>
       <script file="EmbeddedPy">
@@ -987,11 +987,11 @@ elif value>=1:	# 10 mW
   </widget>
   <widget type="label" version="2.0.0">
     <name>LLRF1 Output Level_Label</name>
-    <text>LLRF1 Output Level </text>
-    <x>148</x>
-    <y>92</y>
-    <width>118</width>
-    <height>14</height>
+    <text>LLRF1 Output Level</text>
+    <x>151</x>
+    <y>93</y>
+    <width>114</width>
+    <height>15</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="12.0">
       </font>
@@ -1033,8 +1033,8 @@ elif value>=1:	# 10 mW
       </action>
     </actions>
     <text></text>
-    <x>18</x>
-    <y>147</y>
+    <x>26</x>
+    <y>154</y>
     <width>82</width>
     <height>70</height>
     <font>
@@ -1051,7 +1051,7 @@ elif value>=1:	# 10 mW
   <widget type="progressbar" version="2.0.0">
     <name>Progress Bar_2</name>
     <pv_name>LEL-RF-LLRF02:ad2:ch7:amp_average_s.AVERAGE</pv_name>
-    <x>535</x>
+    <x>511</x>
     <y>110</y>
     <width>118</width>
     <scripts>
@@ -1078,10 +1078,10 @@ elif value>=1:	# 10 mW
   <widget type="label" version="2.0.0">
     <name>LLRF2 Output Level_Label</name>
     <text>LLRF2 Output Level </text>
-    <x>535</x>
+    <x>511</x>
     <y>92</y>
     <width>118</width>
-    <height>14</height>
+    <height>15</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="12.0">
       </font>
@@ -1123,7 +1123,7 @@ elif value>=1:	# 10 mW
       </action>
     </actions>
     <text></text>
-    <x>409</x>
+    <x>385</x>
     <y>147</y>
     <width>82</width>
     <height>70</height>
@@ -1141,7 +1141,7 @@ elif value>=1:	# 10 mW
   <widget type="progressbar" version="2.0.0">
     <name>Progress Bar_3</name>
     <pv_name>LEL-RF-LLRF03:ad2:ch7:amp_average_s.AVERAGE</pv_name>
-    <x>928</x>
+    <x>904</x>
     <y>110</y>
     <width>118</width>
     <scripts>
@@ -1168,10 +1168,10 @@ elif value>=1:	# 10 mW
   <widget type="label" version="2.0.0">
     <name>LLRF3 Output Level_Label</name>
     <text>LLRF3 Output Level </text>
-    <x>928</x>
+    <x>904</x>
     <y>92</y>
     <width>118</width>
-    <height>14</height>
+    <height>15</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="12.0">
       </font>
@@ -1213,7 +1213,7 @@ elif value>=1:	# 10 mW
       </action>
     </actions>
     <text></text>
-    <x>803</x>
+    <x>779</x>
     <y>147</y>
     <width>82</width>
     <height>70</height>
@@ -1231,7 +1231,7 @@ elif value>=1:	# 10 mW
   <widget type="progressbar" version="2.0.0">
     <name>Progress Bar_4</name>
     <pv_name>LEL-RF-LLRF04:ad2:ch7:amp_average_s.AVERAGE</pv_name>
-    <x>1314</x>
+    <x>1290</x>
     <y>111</y>
     <width>118</width>
     <scripts>
@@ -1258,10 +1258,10 @@ elif value>=1:	# 10 mW
   <widget type="label" version="2.0.0">
     <name>LLRF4 Output Level_Label</name>
     <text>LLRF4 Output Level </text>
-    <x>1314</x>
+    <x>1290</x>
     <y>93</y>
     <width>118</width>
-    <height>14</height>
+    <height>15</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="12.0">
       </font>
@@ -1303,7 +1303,7 @@ elif value>=1:	# 10 mW
       </action>
     </actions>
     <text></text>
-    <x>1189</x>
+    <x>1165</x>
     <y>148</y>
     <width>82</width>
     <height>70</height>
@@ -1320,8 +1320,8 @@ elif value>=1:	# 10 mW
   </widget>
   <widget type="label" version="2.0.0">
     <name>VM1-POWER</name>
-    <x>28</x>
-    <y>147</y>
+    <x>29</x>
+    <y>148</y>
     <width>60</width>
     <height>48</height>
     <font>
@@ -1349,8 +1349,8 @@ widget.setPropertyValue("text", text)]]></text>
   </widget>
   <widget type="label" version="2.0.0">
     <name>VM1-PHASE</name>
-    <x>18</x>
-    <y>195</y>
+    <x>19</x>
+    <y>196</y>
     <width>80</width>
     <height>73</height>
     <font>
@@ -1377,7 +1377,7 @@ widget.setPropertyValue("text", text)]]></text>
   </widget>
   <widget type="label" version="2.0.0">
     <name>VM2-POWER</name>
-    <x>419</x>
+    <x>395</x>
     <y>147</y>
     <width>60</width>
     <height>48</height>
@@ -1406,7 +1406,7 @@ widget.setPropertyValue("text", text)]]></text>
   </widget>
   <widget type="label" version="2.0.0">
     <name>VM2-PHASE</name>
-    <x>409</x>
+    <x>385</x>
     <y>195</y>
     <width>80</width>
     <height>73</height>
@@ -1434,7 +1434,7 @@ widget.setPropertyValue("text", text)]]></text>
   </widget>
   <widget type="label" version="2.0.0">
     <name>VM3-POWER</name>
-    <x>813</x>
+    <x>789</x>
     <y>147</y>
     <width>60</width>
     <height>48</height>
@@ -1463,7 +1463,7 @@ widget.setPropertyValue("text", text)]]></text>
   </widget>
   <widget type="label" version="2.0.0">
     <name>VM3-PHASE</name>
-    <x>803</x>
+    <x>779</x>
     <y>195</y>
     <width>80</width>
     <height>73</height>
@@ -1491,7 +1491,7 @@ widget.setPropertyValue("text", text)]]></text>
   </widget>
   <widget type="label" version="2.0.0">
     <name>VM4-POWER</name>
-    <x>1199</x>
+    <x>1175</x>
     <y>148</y>
     <width>60</width>
     <height>48</height>
@@ -1520,7 +1520,7 @@ widget.setPropertyValue("text", text)]]></text>
   </widget>
   <widget type="label" version="2.0.0">
     <name>VM4-PHASE</name>
-    <x>1189</x>
+    <x>1165</x>
     <y>196</y>
     <width>80</width>
     <height>73</height>
@@ -1549,305 +1549,35 @@ widget.setPropertyValue("text", text)]]></text>
   <widget type="group" version="3.0.0">
     <name>STATUS LLRF1</name>
     <x>8</x>
-    <width>367</width>
+    <width>322</width>
     <height>89</height>
     <style>3</style>
     <transparent>true</transparent>
-    <widget type="group" version="3.0.0">
-      <name>STATUS LLRF1</name>
-      <width>367</width>
-      <height>89</height>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-      <transparent>true</transparent>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>RF ON/OFF LLRF1</name>
-      <class>ON_OFF</class>
-      <pv_name>LEL-RF-LLRF01:app:rf_ctrl</pv_name>
-      <x>18</x>
-      <y>22</y>
-      <width>48</width>
-      <height>53</height>
-      <off_label>RF OFF</off_label>
-      <off_color use_class="true">
-        <color name="Off" red="60" green="100" blue="60">
-        </color>
-      </off_color>
-      <on_label>RF ON</on_label>
-      <on_color use_class="true">
-        <color name="On" red="0" green="255" blue="0">
-        </color>
-      </on_color>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="12.0">
-        </font>
-      </font>
-      <square>true</square>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>AMP LOOP ON/OFF LLRF1</name>
-      <class>ON_OFF</class>
-      <pv_name>LEL-RF-LLRF01:vm:dsp:pi_amp:loop_closed</pv_name>
-      <x>69</x>
-      <y>50</y>
-      <width>95</width>
-      <height>25</height>
-      <off_label>AMP FBK OFF</off_label>
-      <off_color use_class="true">
-        <color name="Off" red="60" green="100" blue="60">
-        </color>
-      </off_color>
-      <on_label>AMP FBK ON</on_label>
-      <on_color use_class="true">
-        <color name="On" red="0" green="255" blue="0">
-        </color>
-      </on_color>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="10.0">
-        </font>
-      </font>
-      <square>true</square>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>PH LOOP ON/OFF LLRF1</name>
-      <class>ON_OFF</class>
-      <pv_name>LEL-RF-LLRF01:vm:dsp:pi_ph:loop_closed</pv_name>
-      <x>166</x>
-      <y>50</y>
-      <width>95</width>
-      <height>25</height>
-      <off_label>PHASE FBK OFF</off_label>
-      <off_color use_class="true">
-        <color name="Off" red="60" green="100" blue="60">
-        </color>
-      </off_color>
-      <on_label>PHASE FBK ON</on_label>
-      <on_color use_class="true">
-        <color name="On" red="0" green="255" blue="0">
-        </color>
-      </on_color>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="10.0">
-        </font>
-      </font>
-      <square>true</square>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>TRIG ON/OFF LLRF1</name>
-      <class>ON_OFF</class>
-      <pv_name>LEL-RF-LLRF01:tcm:trig:source</pv_name>
-      <x>69</x>
-      <y>22</y>
-      <width>95</width>
-      <height>25</height>
-      <off_label>TRIGGER OFF</off_label>
-      <off_color use_class="true">
-        <color name="Off" red="60" green="100" blue="60">
-        </color>
-      </off_color>
-      <on_color use_class="true">
-        <color name="On" red="0" green="255" blue="0">
-        </color>
-      </on_color>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="10.0">
-        </font>
-      </font>
-      <line_color>
-        <color name="Header_Background" red="77" green="77" blue="77">
-        </color>
-      </line_color>
-      <square>true</square>
-      <scripts>
-        <script file="EmbeddedPy">
-          <text><![CDATA[# Embedded python script
-from org.csstudio.display.builder.runtime.script import PVUtil
-from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
-
-value = PVUtil.getString(pvs[0])
-if value == "Internal":
-    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
-    widget.setPropertyValue('on_label', "TRIGGER INT")
-
-if value == "External":
-    widget.setPropertyValue('on_color', ColorFontUtil.GREEN)
-    widget.setPropertyValue('on_label', "TRIGGER EXT")
-
-
-   
-
-]]></text>
-          <pv_name>LEL-RF-LLRF01:tcm:trig:source</pv_name>
-        </script>
-      </scripts>
-      <tooltip></tooltip>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>INTERLOCK LLRF1</name>
-      <class>GOOD_BAD</class>
-      <pv_name>LEL-RF-LLRF01:app:interlock:state</pv_name>
-      <bit>0</bit>
-      <x>166</x>
-      <y>22</y>
-      <width>95</width>
-      <height>25</height>
-      <off_label>NO INTERLOCK</off_label>
-      <off_color use_class="true">
-        <color name="OK" red="0" green="255" blue="0">
-        </color>
-      </off_color>
-      <on_label>INTERLOCK</on_label>
-      <on_color use_class="true">
-        <color name="MAJOR" red="255" green="0" blue="0">
-        </color>
-      </on_color>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="10.0">
-        </font>
-      </font>
-      <square>true</square>
-    </widget>
-    <widget type="polyline" version="2.0.0">
-      <name>Polyline1</name>
-      <x>269</x>
-      <y>26</y>
-      <width>1</width>
-      <height>47</height>
-      <points>
-        <point x="0.0" y="0.0">
-        </point>
-        <point x="0.0" y="47.0">
-        </point>
-      </points>
-      <line_width>1</line_width>
-      <line_color>
-        <color red="0" green="0" blue="0">
-        </color>
-      </line_color>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>CONDITIONING ON/OFF LLRF3_1</name>
-      <class>ON_OFF</class>
-      <pv_name>ELI:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
-      <x>275</x>
-      <y>22</y>
-      <width>75</width>
-      <height>53</height>
-      <off_color use_class="true">
-        <color name="Off" red="60" green="100" blue="60">
-        </color>
-      </off_color>
-      <on_color use_class="true">
-        <color name="On" red="0" green="255" blue="0">
-        </color>
-      </on_color>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="12.0">
-        </font>
-      </font>
-      <square>true</square>
-      <scripts>
-        <script file="EmbeddedPy">
-          <text><![CDATA[# Embedded python script
-from org.csstudio.display.builder.runtime.script import PVUtil
-from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
-
-value = int(PVUtil.getDouble(pvs[0]))
-if value == 1:
-    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
-    widget.setPropertyValue('on_label', "COND. ON")
-
-if value == 0:
-    widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
-    widget.setPropertyValue('off_label', "COND. OFF")
-]]></text>
-          <pv_name>ELI:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
-        </script>
-      </scripts>
-    </widget>
   </widget>
   <widget type="group" version="3.0.0">
-    <name>STATUS LLRF2</name>
-    <x>400</x>
-    <width>367</width>
+    <name>STATUS RF2</name>
+    <x>367</x>
+    <width>322</width>
     <height>89</height>
-    <style>3</style>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
     <transparent>true</transparent>
-    <widget type="group" version="3.0.0">
-      <name>STATUS LLRF2</name>
-      <width>367</width>
-      <height>89</height>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-      <transparent>true</transparent>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>RF ON/OFF LLRF2</name>
-      <class>ON_OFF</class>
-      <pv_name>LEL-RF-LLRF02:app:rf_ctrl</pv_name>
-      <x>17</x>
-      <y>20</y>
-      <width>48</width>
-      <height>53</height>
-      <off_label>RF OFF</off_label>
-      <off_color use_class="true">
-        <color name="Off" red="60" green="100" blue="60">
-        </color>
-      </off_color>
-      <on_label>RF ON</on_label>
-      <on_color use_class="true">
-        <color name="On" red="0" green="255" blue="0">
-        </color>
-      </on_color>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="12.0">
-        </font>
-      </font>
-      <square>true</square>
-    </widget>
     <widget type="led" version="2.0.0">
       <name>AMP LOOP ON/OFF LLRF2</name>
       <class>ON_OFF</class>
       <pv_name>LEL-RF-LLRF02:vm:dsp:pi_amp:loop_closed</pv_name>
-      <x>68</x>
-      <y>48</y>
-      <width>95</width>
-      <height>25</height>
+      <x>167</x>
+      <y>4</y>
+      <width>34</width>
+      <height>53</height>
       <off_label>AMP FBK OFF</off_label>
       <off_color use_class="true">
         <color name="Off" red="60" green="100" blue="60">
         </color>
       </off_color>
       <on_label>AMP FBK ON</on_label>
-      <on_color use_class="true">
-        <color name="On" red="0" green="255" blue="0">
-        </color>
-      </on_color>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="10.0">
-        </font>
-      </font>
-      <square>true</square>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>PH LOOP ON/OFF LLRF2</name>
-      <class>ON_OFF</class>
-      <pv_name>LEL-RF-LLRF02:vm:dsp:pi_ph:loop_closed</pv_name>
-      <x>165</x>
-      <y>48</y>
-      <width>95</width>
-      <height>25</height>
-      <off_label>PHASE FBK OFF</off_label>
-      <off_color use_class="true">
-        <color name="Off" red="60" green="100" blue="60">
-        </color>
-      </off_color>
-      <on_label>PHASE FBK ON</on_label>
       <on_color use_class="true">
         <color name="On" red="0" green="255" blue="0">
         </color>
@@ -1862,11 +1592,11 @@ if value == 0:
       <name>TRIG ON/OFF LLRF2</name>
       <class>ON_OFF</class>
       <pv_name>LEL-RF-LLRF02:tcm:trig:source</pv_name>
-      <x>68</x>
-      <y>20</y>
-      <width>95</width>
-      <height>25</height>
-      <off_label>TRIGGER OFF</off_label>
+      <x>95</x>
+      <y>4</y>
+      <width>31</width>
+      <height>53</height>
+      <off_label>TRIG OFF</off_label>
       <off_color use_class="true">
         <color name="Off" red="60" green="100" blue="60">
         </color>
@@ -1909,22 +1639,21 @@ if value == "External":
       <tooltip></tooltip>
     </widget>
     <widget type="led" version="2.0.0">
-      <name>INTERLOCK LLRF2</name>
-      <class>GOOD_BAD</class>
-      <pv_name>LEL-RF-LLRF02:app:interlock:state</pv_name>
-      <bit>0</bit>
-      <x>165</x>
-      <y>20</y>
-      <width>95</width>
-      <height>25</height>
-      <off_label>NO INTERLOCK</off_label>
+      <name>PH LOOP ON/OFF LLRF2</name>
+      <class>ON_OFF</class>
+      <pv_name>LEL-RF-LLRF02:vm:dsp:pi_ph:loop_closed</pv_name>
+      <x>204</x>
+      <y>4</y>
+      <width>36</width>
+      <height>53</height>
+      <off_label>PHASE FBK OFF</off_label>
       <off_color use_class="true">
-        <color name="OK" red="0" green="255" blue="0">
+        <color name="Off" red="60" green="100" blue="60">
         </color>
       </off_color>
-      <on_label>INTERLOCK</on_label>
+      <on_label>PHASE FBK ON</on_label>
       <on_color use_class="true">
-        <color name="MAJOR" red="255" green="0" blue="0">
+        <color name="On" red="0" green="255" blue="0">
         </color>
       </on_color>
       <font>
@@ -1934,9 +1663,9 @@ if value == "External":
       <square>true</square>
     </widget>
     <widget type="polyline" version="2.0.0">
-      <name>Polyline2</name>
-      <x>268</x>
-      <y>24</y>
+      <name>Polyline1_3</name>
+      <x>163</x>
+      <y>8</y>
       <width>1</width>
       <height>47</height>
       <points>
@@ -1955,14 +1684,16 @@ if value == "External":
       <name>CONDITIONING ON/OFF LLRF2</name>
       <class>ON_OFF</class>
       <pv_name>ELI:RF:CONDITIONING02:CONDITIONING_STATUS</pv_name>
-      <x>274</x>
-      <y>20</y>
-      <width>75</width>
+      <x>247</x>
+      <y>4</y>
+      <width>42</width>
       <height>53</height>
+      <off_label>COND OFF</off_label>
       <off_color use_class="true">
         <color name="Off" red="60" green="100" blue="60">
         </color>
       </off_color>
+      <on_label>COND ON</on_label>
       <on_color use_class="true">
         <color name="On" red="0" green="255" blue="0">
         </color>
@@ -1987,35 +1718,60 @@ if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
     widget.setPropertyValue('off_label', "COND. OFF")
 ]]></text>
-          <pv_name>ELI:RF:CONDITIONING03:CONDITIONING_STATUS</pv_name>
+          <pv_name>ELI:RF:CONDITIONING02:CONDITIONING_STATUS</pv_name>
         </script>
       </scripts>
     </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>STATUS LLRF3</name>
-    <x>792</x>
-    <width>367</width>
-    <height>89</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="group" version="3.0.0">
-      <name>STATUS LLRF3</name>
-      <width>367</width>
-      <height>89</height>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-      <transparent>true</transparent>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline1_4</name>
+      <x>91</x>
+      <y>7</y>
+      <width>1</width>
+      <height>47</height>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="0.0" y="47.0">
+        </point>
+      </points>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
     </widget>
     <widget type="led" version="2.0.0">
-      <name>RF ON/OFF LLRF3</name>
+      <name>INTERLOCK LLRF2</name>
+      <class>GOOD_BAD</class>
+      <pv_name>LEL-RF-LLRF02:app:interlock:state</pv_name>
+      <bit>0</bit>
+      <x>128</x>
+      <y>4</y>
+      <width>31</width>
+      <height>53</height>
+      <off_label>NO INTLK</off_label>
+      <off_color use_class="true">
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_label>INTLK</on_label>
+      <on_color use_class="true">
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="10.0">
+        </font>
+      </font>
+      <square>true</square>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>RF ON/OFF LLRF2</name>
       <class>ON_OFF</class>
-      <pv_name>LEL-RF-LLRF03:app:rf_ctrl</pv_name>
-      <x>19</x>
-      <y>20</y>
-      <width>48</width>
+      <pv_name>LEL-RF-LLRF02:app:rf_ctrl</pv_name>
+      <x>45</x>
+      <y>4</y>
+      <width>42</width>
       <height>53</height>
       <off_label>RF OFF</off_label>
       <off_color use_class="true">
@@ -2034,13 +1790,89 @@ if value == 0:
       <square>true</square>
     </widget>
     <widget type="led" version="2.0.0">
+      <name>MOD STATE2</name>
+      <class>ON_OFF</class>
+      <pv_name>LEL-RF-LLRF02:app:rf_ctrl</pv_name>
+      <y>4</y>
+      <width>42</width>
+      <height>53</height>
+      <off_label>MOD OFF</off_label>
+      <off_color use_class="true">
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </off_color>
+      <on_label>TRIG</on_label>
+      <on_color use_class="true">
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="12.0">
+        </font>
+      </font>
+      <square>true</square>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil
+from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
+
+value = PVUtil.getString(pvs[0])
+if value == "StandBy":
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "STDBY")
+
+if value == "HV OFF":
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "HV OFF")
+
+if value == "HV ON:
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "HV ON")
+
+   
+
+]]></text>
+        </script>
+      </scripts>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline1_5</name>
+      <x>243</x>
+      <y>7</y>
+      <width>1</width>
+      <height>47</height>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="0.0" y="47.0">
+        </point>
+      </points>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>STATUS RF3</name>
+    <x>760</x>
+    <width>322</width>
+    <height>89</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <transparent>true</transparent>
+    <widget type="led" version="2.0.0">
       <name>AMP LOOP ON/OFF LLRF3</name>
       <class>ON_OFF</class>
       <pv_name>LEL-RF-LLRF03:vm:dsp:pi_amp:loop_closed</pv_name>
-      <x>70</x>
-      <y>48</y>
-      <width>95</width>
-      <height>25</height>
+      <x>167</x>
+      <y>4</y>
+      <width>34</width>
+      <height>53</height>
       <off_label>AMP FBK OFF</off_label>
       <off_color use_class="true">
         <color name="Off" red="60" green="100" blue="60">
@@ -2058,38 +1890,14 @@ if value == 0:
       <square>true</square>
     </widget>
     <widget type="led" version="2.0.0">
-      <name>PH LOOP ON/OFF LLRF3</name>
-      <class>ON_OFF</class>
-      <pv_name>LEL-RF-LLRF03:vm:dsp:pi_ph:loop_closed</pv_name>
-      <x>167</x>
-      <y>48</y>
-      <width>95</width>
-      <height>25</height>
-      <off_label>PHASE FBK OFF</off_label>
-      <off_color use_class="true">
-        <color name="Off" red="60" green="100" blue="60">
-        </color>
-      </off_color>
-      <on_label>PHASE FBK ON</on_label>
-      <on_color use_class="true">
-        <color name="On" red="0" green="255" blue="0">
-        </color>
-      </on_color>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="10.0">
-        </font>
-      </font>
-      <square>true</square>
-    </widget>
-    <widget type="led" version="2.0.0">
       <name>TRIG ON/OFF LLRF3</name>
       <class>ON_OFF</class>
       <pv_name>LEL-RF-LLRF03:tcm:trig:source</pv_name>
-      <x>70</x>
-      <y>20</y>
-      <width>95</width>
-      <height>25</height>
-      <off_label>TRIGGER OFF</off_label>
+      <x>95</x>
+      <y>4</y>
+      <width>31</width>
+      <height>53</height>
+      <off_label>TRIG OFF</off_label>
       <off_color use_class="true">
         <color name="Off" red="60" green="100" blue="60">
         </color>
@@ -2132,22 +1940,21 @@ if value == "External":
       <tooltip></tooltip>
     </widget>
     <widget type="led" version="2.0.0">
-      <name>INTERLOCK LLRF3</name>
-      <class>GOOD_BAD</class>
-      <pv_name>LEL-RF-LLRF03:app:interlock:state</pv_name>
-      <bit>0</bit>
-      <x>167</x>
-      <y>20</y>
-      <width>95</width>
-      <height>25</height>
-      <off_label>NO INTERLOCK</off_label>
+      <name>PH LOOP ON/OFF LLRF3</name>
+      <class>ON_OFF</class>
+      <pv_name>LEL-RF-LLRF03:vm:dsp:pi_ph:loop_closed</pv_name>
+      <x>204</x>
+      <y>4</y>
+      <width>36</width>
+      <height>53</height>
+      <off_label>PHASE FBK OFF</off_label>
       <off_color use_class="true">
-        <color name="OK" red="0" green="255" blue="0">
+        <color name="Off" red="60" green="100" blue="60">
         </color>
       </off_color>
-      <on_label>INTERLOCK</on_label>
+      <on_label>PHASE FBK ON</on_label>
       <on_color use_class="true">
-        <color name="MAJOR" red="255" green="0" blue="0">
+        <color name="On" red="0" green="255" blue="0">
         </color>
       </on_color>
       <font>
@@ -2156,18 +1963,38 @@ if value == "External":
       </font>
       <square>true</square>
     </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline1_9</name>
+      <x>163</x>
+      <y>8</y>
+      <width>1</width>
+      <height>47</height>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="0.0" y="47.0">
+        </point>
+      </points>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+    </widget>
     <widget type="led" version="2.0.0">
       <name>CONDITIONING ON/OFF LLRF3</name>
       <class>ON_OFF</class>
       <pv_name>ELI:RF:CONDITIONING03:CONDITIONING_STATUS</pv_name>
-      <x>275</x>
-      <y>20</y>
-      <width>75</width>
+      <x>247</x>
+      <y>4</y>
+      <width>42</width>
       <height>53</height>
+      <off_label>COND OFF</off_label>
       <off_color use_class="true">
         <color name="Off" red="60" green="100" blue="60">
         </color>
       </off_color>
+      <on_label>COND ON</on_label>
       <on_color use_class="true">
         <color name="On" red="0" green="255" blue="0">
         </color>
@@ -2197,9 +2024,9 @@ if value == 0:
       </scripts>
     </widget>
     <widget type="polyline" version="2.0.0">
-      <name>Polyline3</name>
-      <x>269</x>
-      <y>24</y>
+      <name>Polyline1_10</name>
+      <x>91</x>
+      <y>7</y>
       <width>1</width>
       <height>47</height>
       <points>
@@ -2214,31 +2041,38 @@ if value == 0:
         </color>
       </line_color>
     </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>STATUS LLRF4</name>
-    <x>1180</x>
-    <width>367</width>
-    <height>89</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="group" version="3.0.0">
-      <name>STATUS LLRF4</name>
-      <width>367</width>
-      <height>89</height>
+    <widget type="led" version="2.0.0">
+      <name>INTERLOCK LLRF3</name>
+      <class>GOOD_BAD</class>
+      <pv_name>LEL-RF-LLRF03:app:interlock:state</pv_name>
+      <bit>0</bit>
+      <x>128</x>
+      <y>4</y>
+      <width>31</width>
+      <height>53</height>
+      <off_label>NO INTLK</off_label>
+      <off_color use_class="true">
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_label>INTLK</on_label>
+      <on_color use_class="true">
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </on_color>
       <font>
-        <font family="Liberation Sans" style="BOLD" size="14.0">
+        <font family="Liberation Sans" style="BOLD" size="10.0">
         </font>
       </font>
-      <transparent>true</transparent>
+      <square>true</square>
     </widget>
     <widget type="led" version="2.0.0">
-      <name>RF ON/OFF LLRF4</name>
+      <name>RF ON/OFF LLRF3</name>
       <class>ON_OFF</class>
-      <pv_name>LEL-RF-LLRF04:app:rf_ctrl</pv_name>
-      <x>17</x>
-      <y>19</y>
-      <width>48</width>
+      <pv_name>LEL-RF-LLRF03:app:rf_ctrl</pv_name>
+      <x>45</x>
+      <y>4</y>
+      <width>42</width>
       <height>53</height>
       <off_label>RF OFF</off_label>
       <off_color use_class="true">
@@ -2257,13 +2091,89 @@ if value == 0:
       <square>true</square>
     </widget>
     <widget type="led" version="2.0.0">
-      <name>AMP LOOP ON/OFF LLRF4</name>
+      <name>MOD STATE3</name>
       <class>ON_OFF</class>
-      <pv_name>LEL-RF-LLRF04:vm:dsp:pi_amp:loop_closed</pv_name>
-      <x>68</x>
-      <y>47</y>
-      <width>95</width>
-      <height>25</height>
+      <pv_name>LEL-RF-LLRF03:app:rf_ctrl</pv_name>
+      <y>4</y>
+      <width>42</width>
+      <height>53</height>
+      <off_label>MOD OFF</off_label>
+      <off_color use_class="true">
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </off_color>
+      <on_label>TRIG</on_label>
+      <on_color use_class="true">
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="12.0">
+        </font>
+      </font>
+      <square>true</square>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil
+from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
+
+value = PVUtil.getString(pvs[0])
+if value == "StandBy":
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "STDBY")
+
+if value == "HV OFF":
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "HV OFF")
+
+if value == "HV ON:
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "HV ON")
+
+   
+
+]]></text>
+        </script>
+      </scripts>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline1_11</name>
+      <x>243</x>
+      <y>7</y>
+      <width>1</width>
+      <height>47</height>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="0.0" y="47.0">
+        </point>
+      </points>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>STATUS RF1</name>
+    <x>4</x>
+    <width>322</width>
+    <height>89</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <transparent>true</transparent>
+    <widget type="led" version="2.0.0">
+      <name>AMP LOOP ON/OFF LLRF1</name>
+      <class>ON_OFF</class>
+      <pv_name>LEL-RF-LLRF01:vm:dsp:pi_amp:loop_closed</pv_name>
+      <x>167</x>
+      <y>4</y>
+      <width>34</width>
+      <height>53</height>
       <off_label>AMP FBK OFF</off_label>
       <off_color use_class="true">
         <color name="Off" red="60" green="100" blue="60">
@@ -2281,13 +2191,63 @@ if value == 0:
       <square>true</square>
     </widget>
     <widget type="led" version="2.0.0">
-      <name>PH LOOP ON/OFF LLRF4</name>
+      <name>TRIG ON/OFF LLRF1</name>
       <class>ON_OFF</class>
-      <pv_name>LEL-RF-LLRF04:vm:dsp:pi_ph:loop_closed</pv_name>
-      <x>165</x>
-      <y>47</y>
-      <width>95</width>
-      <height>25</height>
+      <pv_name>LEL-RF-LLRF01:tcm:trig:source</pv_name>
+      <x>95</x>
+      <y>4</y>
+      <width>31</width>
+      <height>53</height>
+      <off_label>TRIG OFF</off_label>
+      <off_color use_class="true">
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </off_color>
+      <on_color use_class="true">
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="10.0">
+        </font>
+      </font>
+      <line_color>
+        <color name="Header_Background" red="77" green="77" blue="77">
+        </color>
+      </line_color>
+      <square>true</square>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil
+from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
+
+value = PVUtil.getString(pvs[0])
+if value == "Internal":
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "TRIGGER INT")
+
+if value == "External":
+    widget.setPropertyValue('on_color', ColorFontUtil.GREEN)
+    widget.setPropertyValue('on_label', "TRIGGER EXT")
+
+
+   
+
+]]></text>
+          <pv_name>LEL-RF-LLRF01:tcm:trig:source</pv_name>
+        </script>
+      </scripts>
+      <tooltip></tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>PH LOOP ON/OFF LLRF1</name>
+      <class>ON_OFF</class>
+      <pv_name>LEL-RF-LLRF01:vm:dsp:pi_ph:loop_closed</pv_name>
+      <x>204</x>
+      <y>4</y>
+      <width>36</width>
+      <height>53</height>
       <off_label>PHASE FBK OFF</off_label>
       <off_color use_class="true">
         <color name="Off" red="60" green="100" blue="60">
@@ -2304,15 +2264,242 @@ if value == 0:
       </font>
       <square>true</square>
     </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline1</name>
+      <x>163</x>
+      <y>8</y>
+      <width>1</width>
+      <height>47</height>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="0.0" y="47.0">
+        </point>
+      </points>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>CONDITIONING ON/OFF LLRF3_1</name>
+      <class>ON_OFF</class>
+      <pv_name>ELI:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
+      <x>247</x>
+      <y>4</y>
+      <width>42</width>
+      <height>53</height>
+      <off_label>COND OFF</off_label>
+      <off_color use_class="true">
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </off_color>
+      <on_label>COND ON</on_label>
+      <on_color use_class="true">
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="12.0">
+        </font>
+      </font>
+      <square>true</square>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil
+from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
+
+value = int(PVUtil.getDouble(pvs[0]))
+if value == 1:
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "COND. ON")
+
+if value == 0:
+    widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
+    widget.setPropertyValue('off_label', "COND. OFF")
+]]></text>
+          <pv_name>ELI:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
+        </script>
+      </scripts>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline1_1</name>
+      <x>91</x>
+      <y>7</y>
+      <width>1</width>
+      <height>47</height>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="0.0" y="47.0">
+        </point>
+      </points>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>INTERLOCK LLRF1</name>
+      <class>GOOD_BAD</class>
+      <pv_name>LEL-RF-LLRF01:app:interlock:state</pv_name>
+      <bit>0</bit>
+      <x>128</x>
+      <y>4</y>
+      <width>31</width>
+      <height>53</height>
+      <off_label>NO INTLK</off_label>
+      <off_color use_class="true">
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_label>INTLK</on_label>
+      <on_color use_class="true">
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="10.0">
+        </font>
+      </font>
+      <square>true</square>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>RF ON/OFF LLRF1</name>
+      <class>ON_OFF</class>
+      <pv_name>LEL-RF-LLRF01:app:rf_ctrl</pv_name>
+      <x>45</x>
+      <y>4</y>
+      <width>42</width>
+      <height>53</height>
+      <off_label>RF OFF</off_label>
+      <off_color use_class="true">
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </off_color>
+      <on_label>RF ON</on_label>
+      <on_color use_class="true">
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="12.0">
+        </font>
+      </font>
+      <square>true</square>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>MOD STATE</name>
+      <class>ON_OFF</class>
+      <pv_name>LEL-RF-LLRF01:app:rf_ctrl</pv_name>
+      <y>4</y>
+      <width>42</width>
+      <height>53</height>
+      <off_label>MOD OFF</off_label>
+      <off_color use_class="true">
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </off_color>
+      <on_label>TRIG</on_label>
+      <on_color use_class="true">
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="12.0">
+        </font>
+      </font>
+      <square>true</square>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil
+from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
+
+value = PVUtil.getString(pvs[0])
+if value == "StandBy":
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "STDBY")
+
+if value == "HV OFF":
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "HV OFF")
+
+if value == "HV ON:
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "HV ON")
+
+   
+
+]]></text>
+        </script>
+      </scripts>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline1_2</name>
+      <x>243</x>
+      <y>7</y>
+      <width>1</width>
+      <height>47</height>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="0.0" y="47.0">
+        </point>
+      </points>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>STATUS RF4</name>
+    <x>1145</x>
+    <width>322</width>
+    <height>89</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <transparent>true</transparent>
+    <widget type="led" version="2.0.0">
+      <name>AMP LOOP ON/OFF LLRF4</name>
+      <class>ON_OFF</class>
+      <pv_name>LEL-RF-LLRF04:vm:dsp:pi_amp:loop_closed</pv_name>
+      <x>167</x>
+      <y>4</y>
+      <width>34</width>
+      <height>53</height>
+      <off_label>AMP FBK OFF</off_label>
+      <off_color use_class="true">
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </off_color>
+      <on_label>AMP FBK ON</on_label>
+      <on_color use_class="true">
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="10.0">
+        </font>
+      </font>
+      <square>true</square>
+    </widget>
     <widget type="led" version="2.0.0">
       <name>TRIG ON/OFF LLRF4</name>
       <class>ON_OFF</class>
       <pv_name>LEL-RF-LLRF04:tcm:trig:source</pv_name>
-      <x>68</x>
-      <y>19</y>
-      <width>95</width>
-      <height>25</height>
-      <off_label>TRIGGER OFF</off_label>
+      <x>95</x>
+      <y>4</y>
+      <width>31</width>
+      <height>53</height>
+      <off_label>TRIG OFF</off_label>
       <off_color use_class="true">
         <color name="Off" red="60" green="100" blue="60">
         </color>
@@ -2355,22 +2542,21 @@ if value == "External":
       <tooltip></tooltip>
     </widget>
     <widget type="led" version="2.0.0">
-      <name>INTERLOCK LLRF4</name>
-      <class>GOOD_BAD</class>
-      <pv_name>LEL-RF-LLRF04:app:interlock:state</pv_name>
-      <bit>0</bit>
-      <x>165</x>
-      <y>19</y>
-      <width>95</width>
-      <height>25</height>
-      <off_label>NO INTERLOCK</off_label>
+      <name>PH LOOP ON/OFF LLRF4</name>
+      <class>ON_OFF</class>
+      <pv_name>LEL-RF-LLRF04:vm:dsp:pi_ph:loop_closed</pv_name>
+      <x>204</x>
+      <y>4</y>
+      <width>36</width>
+      <height>53</height>
+      <off_label>PHASE FBK OFF</off_label>
       <off_color use_class="true">
-        <color name="OK" red="0" green="255" blue="0">
+        <color name="Off" red="60" green="100" blue="60">
         </color>
       </off_color>
-      <on_label>INTERLOCK</on_label>
+      <on_label>PHASE FBK ON</on_label>
       <on_color use_class="true">
-        <color name="MAJOR" red="255" green="0" blue="0">
+        <color name="On" red="0" green="255" blue="0">
         </color>
       </on_color>
       <font>
@@ -2379,18 +2565,38 @@ if value == "External":
       </font>
       <square>true</square>
     </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline1_12</name>
+      <x>163</x>
+      <y>8</y>
+      <width>1</width>
+      <height>47</height>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="0.0" y="47.0">
+        </point>
+      </points>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+    </widget>
     <widget type="led" version="2.0.0">
       <name>CONDITIONING ON/OFF LLRF4</name>
       <class>ON_OFF</class>
       <pv_name>ELI:RF:CONDITIONING04:CONDITIONING_STATUS</pv_name>
-      <x>273</x>
-      <y>19</y>
-      <width>75</width>
+      <x>247</x>
+      <y>4</y>
+      <width>42</width>
       <height>53</height>
+      <off_label>COND OFF</off_label>
       <off_color use_class="true">
         <color name="Off" red="60" green="100" blue="60">
         </color>
       </off_color>
+      <on_label>COND ON</on_label>
       <on_color use_class="true">
         <color name="On" red="0" green="255" blue="0">
         </color>
@@ -2415,14 +2621,128 @@ if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
     widget.setPropertyValue('off_label', "COND. OFF")
 ]]></text>
-          <pv_name>ELI:RF:CONDITIONING03:CONDITIONING_STATUS</pv_name>
+          <pv_name>ELI:RF:CONDITIONING04:CONDITIONING_STATUS</pv_name>
         </script>
       </scripts>
     </widget>
     <widget type="polyline" version="2.0.0">
-      <name>Polyline3_1</name>
-      <x>267</x>
-      <y>23</y>
+      <name>Polyline1_13</name>
+      <x>91</x>
+      <y>7</y>
+      <width>1</width>
+      <height>47</height>
+      <points>
+        <point x="0.0" y="0.0">
+        </point>
+        <point x="0.0" y="47.0">
+        </point>
+      </points>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>INTERLOCK LLRF4</name>
+      <class>GOOD_BAD</class>
+      <pv_name>LEL-RF-LLRF04:app:interlock:state</pv_name>
+      <bit>0</bit>
+      <x>128</x>
+      <y>4</y>
+      <width>31</width>
+      <height>53</height>
+      <off_label>NO INTLK</off_label>
+      <off_color use_class="true">
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_label>INTLK</on_label>
+      <on_color use_class="true">
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="10.0">
+        </font>
+      </font>
+      <square>true</square>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>RF ON/OFF LLRF4</name>
+      <class>ON_OFF</class>
+      <pv_name>LEL-RF-LLRF04:app:rf_ctrl</pv_name>
+      <x>45</x>
+      <y>4</y>
+      <width>42</width>
+      <height>53</height>
+      <off_label>RF OFF</off_label>
+      <off_color use_class="true">
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </off_color>
+      <on_label>RF ON</on_label>
+      <on_color use_class="true">
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="12.0">
+        </font>
+      </font>
+      <square>true</square>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>MOD STATE4</name>
+      <class>ON_OFF</class>
+      <pv_name>LEL-RF-LLRF04:app:rf_ctrl</pv_name>
+      <y>4</y>
+      <width>42</width>
+      <height>53</height>
+      <off_label>MOD OFF</off_label>
+      <off_color use_class="true">
+        <color name="Off" red="60" green="100" blue="60">
+        </color>
+      </off_color>
+      <on_label>TRIG</on_label>
+      <on_color use_class="true">
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="12.0">
+        </font>
+      </font>
+      <square>true</square>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil
+from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
+
+value = PVUtil.getString(pvs[0])
+if value == "StandBy":
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "STDBY")
+
+if value == "HV OFF":
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "HV OFF")
+
+if value == "HV ON:
+    widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
+    widget.setPropertyValue('on_label', "HV ON")
+
+   
+
+]]></text>
+        </script>
+      </scripts>
+    </widget>
+    <widget type="polyline" version="2.0.0">
+      <name>Polyline1_14</name>
+      <x>243</x>
+      <y>7</y>
       <width>1</width>
       <height>47</height>
       <points>
