@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-10-31 11:12:46 by root-->
+<!--Saved on 2025-12-18 14:58:14 by root-->
 <display version="2.0.0">
   <name>Display</name>
   <width>550</width>
@@ -585,7 +585,7 @@ else:
     </widget>
     <widget type="progressbar" version="2.0.0">
       <name>Progress Bar_1</name>
-      <pv_name>LEL-RF-LLRF01:ad2:ch7:amp_average_s.AVERAGE</pv_name>
+      <pv_name>LEL-RF-LLRF01:ad1:ch7:amp_average_s.AVERAGE</pv_name>
       <x>230</x>
       <y>23</y>
       <width>130</width>
@@ -756,7 +756,7 @@ else:
     </widget>
     <widget type="choice" version="2.0.0">
       <name>Choice Button_2</name>
-      <pv_name>SPARC:LLRF2:app:rf_ctrl</pv_name>
+      <pv_name>LEL-RF-LLRF02:app:rf_ctrl</pv_name>
       <x>3</x>
       <y>24</y>
       <width>120</width>
@@ -1247,7 +1247,7 @@ else:
     </widget>
     <widget type="progressbar" version="2.0.0">
       <name>Progress Bar_4</name>
-      <pv_name>LEL-RF-LLRF02:ad2:ch7:amp_average_s.AVERAGE</pv_name>
+      <pv_name>LEL-RF-LLRF02:ad1:ch7:amp_average_s.AVERAGE</pv_name>
       <x>230</x>
       <y>23</y>
       <width>130</width>
@@ -1966,7 +1966,7 @@ if value == 0:
     </widget>
     <widget type="progressbar" version="2.0.0">
       <name>Progress Bar_3</name>
-      <pv_name>LEL-RF-LLRF03:ad2:ch7:amp_average_s.AVERAGE</pv_name>
+      <pv_name>LEL-RF-LLRF03:ad1:ch7:amp_average_s.AVERAGE</pv_name>
       <x>230</x>
       <y>24</y>
       <width>130</width>
@@ -2632,7 +2632,7 @@ if value == 0:
     </widget>
     <widget type="progressbar" version="2.0.0">
       <name>Progress Bar_5</name>
-      <pv_name>LEL-RF-LLRF04:ad2:ch7:amp_average_s.AVERAGE</pv_name>
+      <pv_name>LEL-RF-LLRF04:ad2:ch1:amp_average_s.AVERAGE</pv_name>
       <x>230</x>
       <y>24</y>
       <width>130</width>
