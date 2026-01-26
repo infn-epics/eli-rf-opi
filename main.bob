@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-14 08:54:03 by beatr-->
+<!--Saved on 2026-01-26 18:10:10 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -2855,7 +2855,7 @@ value_deg = round(PVUtil.getDouble(pvs[0]), 1)
 um_phase =" deg"
 text =str(value_deg)+um_phase
 widget.setPropertyValue("text", text)]]></text>
-          <pv_name>LEL-RF-LLRF04:ad2:ch3:phase_average_s.AVERAGE</pv_name>
+          <pv_name>LEL-RF-LLRF04:ad1:ch3:phase_average_s.AVERAGE</pv_name>
         </script>
       </scripts>
     </widget>

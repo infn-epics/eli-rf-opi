@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-22 08:21:49 by beatr-->
+<!--Saved on 2026-01-26 17:07:40 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>1210</width>
@@ -872,7 +872,7 @@ amp_avg.append((PVUtil.getDouble(pvs[1])**2/100)/1e6)  #MW
 PVUtil.writePV(str(pvs[2]), phase_avg, 1)
 PVUtil.writePV(str(pvs[3]), amp_avg, 1)]]></text>
           <pv_name>$(LLRF_NAME):$(SIGNAL):phase_average_s.AVERAGE</pv_name>
-          <pv_name>$(LLRF_NAME):$(SIGNAL):amp_average_s.AVERAGE</pv_name>
+          <pv_name trigger="false">$(LLRF_NAME):$(SIGNAL):amp_average_s.AVERAGE</pv_name>
           <pv_name trigger="false">loc://$(ph_avg)</pv_name>
           <pv_name trigger="false">loc://$(amp_avg)</pv_name>
           <pv_name trigger="false">loc://$(maxGraphEntries)</pv_name>

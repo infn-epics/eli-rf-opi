@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-12-18 14:58:14 by root-->
+<!--Saved on 2026-01-26 17:16:19 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>550</width>
@@ -277,7 +277,7 @@ value_W= PVUtil.getDouble(pvs[0])
 
 text =str(round(value_W/1e6,1)) #MW
 widget.setPropertyValue("text", text)]]></text>
-            <pv_name>SPARC:LLRF1:vm:dsp:sp_amp:power</pv_name>
+            <pv_name>LEL-RF-LLRF01:vm:dsp:sp_amp:power</pv_name>
           </script>
         </scripts>
       </widget>
@@ -585,7 +585,7 @@ else:
     </widget>
     <widget type="progressbar" version="2.0.0">
       <name>Progress Bar_1</name>
-      <pv_name>LEL-RF-LLRF01:ad1:ch7:amp_average_s.AVERAGE</pv_name>
+      <pv_name>LEL-RF-LLRF01:ad1:ch8:amp_average_s.AVERAGE</pv_name>
       <x>230</x>
       <y>23</y>
       <width>130</width>
@@ -605,7 +605,7 @@ elif 0.949<=value<1:	        # 9<value<10 mW
 elif value>=1:	# 10 mW
 	widget.setPropertyValue('fill_color', ColorFontUtil.RED)	
 ]]></text>
-          <pv_name>LEL-RF-LLRF01:ad2:ch7:amp_average_s.AVERAGE</pv_name>
+          <pv_name>LEL-RF-LLRF01:ad1:ch8:amp_average_s.AVERAGE</pv_name>
         </script>
       </scripts>
       <limits_from_pv>false</limits_from_pv>
@@ -681,7 +681,7 @@ if value == 0:
     <transparent>true</transparent>
     <widget type="bool_button" version="2.0.0">
       <name>CLEAR_LLRF2</name>
-      <pv_name>SPARC:LLRF2:app:interlock:state</pv_name>
+      <pv_name>LEL-RF-LLRF02:app:interlock:state</pv_name>
       <x>393</x>
       <y>23</y>
       <width>85</width>
@@ -711,7 +711,7 @@ if interlock==0:
 	widget.setPropertyValue('enabled',0)
 else:
 	widget.setPropertyValue('enabled',1)]]></text>
-          <pv_name>LEL-RF-LLRF03:app:interlock:state</pv_name>
+          <pv_name>LEL-RF-LLRF02:app:interlock:state</pv_name>
         </script>
       </scripts>
       <border_alarm_sensitive>false</border_alarm_sensitive>
@@ -1247,7 +1247,7 @@ else:
     </widget>
     <widget type="progressbar" version="2.0.0">
       <name>Progress Bar_4</name>
-      <pv_name>LEL-RF-LLRF02:ad1:ch7:amp_average_s.AVERAGE</pv_name>
+      <pv_name>LEL-RF-LLRF02:ad1:ch8:amp_average_s.AVERAGE</pv_name>
       <x>230</x>
       <y>23</y>
       <width>130</width>
@@ -1267,7 +1267,7 @@ elif 0.949<=value<1:	        # 9<value<10 mW
 elif value>=1:	# 10 mW
 	widget.setPropertyValue('fill_color', ColorFontUtil.RED)	
 ]]></text>
-          <pv_name>SPARC:LLRF2:ad2:ch7:amp_average_s.AVERAGE</pv_name>
+          <pv_name>LEL-RF-LLRF02:ad1:ch8:amp_average_s.AVERAGE</pv_name>
         </script>
       </scripts>
       <limits_from_pv>false</limits_from_pv>
@@ -1966,7 +1966,7 @@ if value == 0:
     </widget>
     <widget type="progressbar" version="2.0.0">
       <name>Progress Bar_3</name>
-      <pv_name>LEL-RF-LLRF03:ad1:ch7:amp_average_s.AVERAGE</pv_name>
+      <pv_name>LEL-RF-LLRF03:ad1:ch8:amp_average_s.AVERAGE</pv_name>
       <x>230</x>
       <y>24</y>
       <width>130</width>
@@ -1986,7 +1986,7 @@ elif 0.949<=value<1:	        # 9<value<10 mW
 elif value>=1:	# 10 mW
 	widget.setPropertyValue('fill_color', ColorFontUtil.RED)	
 ]]></text>
-          <pv_name>SPARC:LLRF3:ad2:ch7:amp_average_s.AVERAGE</pv_name>
+          <pv_name>LEL-RF-LLRF03:ad1:ch8:amp_average_s.AVERAGE</pv_name>
         </script>
       </scripts>
       <limits_from_pv>false</limits_from_pv>
