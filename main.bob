@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-27 10:10:48 by beatr-->
+<!--Saved on 2026-01-27 16:08:47 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -217,7 +217,7 @@ value = PVUtil.getString(pvs[0])
 
 if value in ("StandByOnRequested","StandByInterlock","StandByOffRequested","StandBy"):
     widget.setPropertyValue('on_color',  ColorFontUtil.getColorFromRGB(60, 100,60))
-    widget.setPropertyValue('on_label', "STDBY")
+    widget.setPropertyValue('on_label', "MOD \n STDBY")
 
 if value in ("HvInterlock","HvOffRequested","HvOnRequested","Hv"):
      widget.setPropertyValue('on_color',  ColorFontUtil.getColorFromRGB(60, 100,60))
@@ -233,7 +233,7 @@ if value=="Error":
 
 if value=="Off":
     widget.setPropertyValue('on_color', ColorFontUtil.GREEN)
-    widget.setPropertyValue('on_label', "MOD /n OFF")
+    widget.setPropertyValue('on_label', "MOD \n OFF")
 ]]></text>
           <pv_name>LEL:MOD:SCAT:MOD01:STATE_RB</pv_name>
         </script>
@@ -610,12 +610,10 @@ ON</on_label>
       <y>4</y>
       <width>42</width>
       <height>50</height>
-      <off_label>MOD OFF</off_label>
       <off_color use_class="true">
         <color name="Off" red="60" green="100" blue="60">
         </color>
       </off_color>
-      <on_label>TRIG</on_label>
       <on_color use_class="true">
         <color name="On" red="0" green="255" blue="0">
         </color>
@@ -635,7 +633,7 @@ value = PVUtil.getString(pvs[0])
 
 if value in ("StandByOnRequested","StandByInterlock","StandByOffRequested","StandBy"):
     widget.setPropertyValue('on_color',  ColorFontUtil.getColorFromRGB(60, 100,60))
-    widget.setPropertyValue('on_label', "STDBY")
+    widget.setPropertyValue('on_label', "MOD \n STDBY")
 
 if value in ("HvInterlock","HvOffRequested","HvOnRequested","Hv"):
      widget.setPropertyValue('on_color',  ColorFontUtil.getColorFromRGB(60, 100,60))
@@ -651,7 +649,7 @@ if value=="Error":
 
 if value=="Off":
     widget.setPropertyValue('on_color', ColorFontUtil.GREEN)
-    widget.setPropertyValue('on_label', "MOD /n OFF")
+    widget.setPropertyValue('on_label', "MOD \n OFF")
 ]]></text>
           <pv_name>LEL:MOD:SCAT:MOD02:STATE_RB</pv_name>
         </script>
@@ -754,9 +752,9 @@ if value == 0:
           <TITLE2>K2 FWD</TITLE2>
           <SIGNAL3>ad1:ch4</SIGNAL3>
           <TITLE3>K2 REV</TITLE3>
-          <SIGNAL4>ad2:ch5</SIGNAL4>
+          <SIGNAL4>ad1:ch5</SIGNAL4>
           <TITLE4>AC1 IN FWD</TITLE4>
-          <SIGNAL5>ad2:ch6</SIGNAL5>
+          <SIGNAL5>ad1:ch6</SIGNAL5>
           <TITLE5>AC1 IN REV</TITLE5>
           <SIGNAL6>ad1:ch1</SIGNAL6>
           <TITLE6>AC1 OUT</TITLE6>
@@ -1053,7 +1051,7 @@ value = PVUtil.getString(pvs[0])
 
 if value in ("StandByOnRequested","StandByInterlock","StandByOffRequested","StandBy"):
     widget.setPropertyValue('on_color',  ColorFontUtil.getColorFromRGB(60, 100,60))
-    widget.setPropertyValue('on_label', "STDBY")
+    widget.setPropertyValue('on_label', "MOD \n STDBY")
 
 if value in ("HvInterlock","HvOffRequested","HvOnRequested","Hv"):
      widget.setPropertyValue('on_color',  ColorFontUtil.getColorFromRGB(60, 100,60))
@@ -1068,9 +1066,12 @@ if value=="Error":
     widget.setPropertyValue('on_label', "Error")
 
 if value=="Off":
-    widget.setPropertyValue('on_color', ColorFontUtil.GREEN)
-    widget.setPropertyValue('on_label', "MOD /n OFF")
-]]></text>
+    widget.setPropertyValue('on_color', ColorFontUtil.getColorFromRGB(60, 100,60))
+    widget.setPropertyValue('on_label', "MOD \n OFF")
+
+if value=="Initialize":
+    widget.setPropertyValue('on_color', ColorFontUtil.getColorFromRGB(60, 100,60))
+    widget.setPropertyValue('on_label', "INIT")]]></text>
           <pv_name>LEL:MOD:SCAT:MOD03:STATE_RB</pv_name>
         </script>
       </scripts>
@@ -1174,16 +1175,16 @@ if value == 0:
           <TITLE3>K3 REV</TITLE3>
           <SIGNAL4>ad1:ch5</SIGNAL4>
           <TITLE4>AC2 IN FWD</TITLE4>
-          <SIGNAL5>ad2:ch6</SIGNAL5>
+          <SIGNAL5>ad1:ch6</SIGNAL5>
           <TITLE5>AC2 IN REV</TITLE5>
-          <SIGNAL6>ad2:ch1</SIGNAL6>
+          <SIGNAL6>ad1:ch1</SIGNAL6>
           <TITLE6>AC2 OUT</TITLE6>
           <power1>power1:LLRF3</power1>
           <power2>power2:LLRF3</power2>
           <power3>power3:LLRF3</power3>
           <power4>power4:LLRF3</power4>
           <power5>power5:LLRF3</power5>
-          <power6>power7:LLRF3</power6>
+          <power6>power6:LLRF3</power6>
         </macros>
         <target>window</target>
       </action>
@@ -1470,7 +1471,7 @@ value = PVUtil.getString(pvs[0])
 
 if value in ("StandByOnRequested","StandByInterlock","StandByOffRequested","StandBy"):
     widget.setPropertyValue('on_color',  ColorFontUtil.getColorFromRGB(60, 100,60))
-    widget.setPropertyValue('on_label', "STDBY")
+    widget.setPropertyValue('on_label', "MOD \n STDBY")
 
 if value in ("HvInterlock","HvOffRequested","HvOnRequested","Hv"):
      widget.setPropertyValue('on_color',  ColorFontUtil.getColorFromRGB(60, 100,60))
@@ -1485,9 +1486,12 @@ if value=="Error":
     widget.setPropertyValue('on_label', "Error")
 
 if value=="Off":
-    widget.setPropertyValue('on_color', ColorFontUtil.GREEN)
-    widget.setPropertyValue('on_label', "MOD /n OFF")
-]]></text>
+    widget.setPropertyValue('on_color', ColorFontUtil.getColorFromRGB(60, 100,60))
+    widget.setPropertyValue('on_label', "MOD \n OFF")
+
+if value=="Initialize":
+    widget.setPropertyValue('on_color', ColorFontUtil.getColorFromRGB(60, 100,60))
+    widget.setPropertyValue('on_label', "INIT")]]></text>
           <pv_name>LEL:MOD:SCAT:MOD04:STATE_RB</pv_name>
         </script>
       </scripts>
@@ -1663,16 +1667,16 @@ elif value>=1:	# 10 mW
           <TITLE3>K4 REV</TITLE3>
           <SIGNAL4>ad1:ch5</SIGNAL4>
           <TITLE4>AC3 IN FWD</TITLE4>
-          <SIGNAL5>ad2:ch6</SIGNAL5>
+          <SIGNAL5>ad1:ch6</SIGNAL5>
           <TITLE5>AC3 IN REV</TITLE5>
-          <SIGNAL6>ad2:ch1</SIGNAL6>
+          <SIGNAL6>ad1:ch1</SIGNAL6>
           <TITLE6>AC3 OUT</TITLE6>
-          <power1>power1:LLRF3</power1>
-          <power2>power2:LLRF3</power2>
-          <power3>power3:LLRF3</power3>
-          <power4>power4:LLRF3</power4>
-          <power5>power5:LLRF3</power5>
-          <power6>power6:LLRF3</power6>
+          <power1>power1:LLRF4</power1>
+          <power2>power2:LLRF4</power2>
+          <power3>power3:LLRF4</power3>
+          <power4>power4:LLRF4</power4>
+          <power5>power5:LLRF4</power5>
+          <power6>power6:LLRF4</power6>
         </macros>
         <target>window</target>
       </action>
@@ -4449,8 +4453,8 @@ widget.setPropertyValue("text", text)]]></text>
           <file>RF_channel.bob</file>
           <macros>
             <LLRF_NAME>LEL-RF-LLRF04</LLRF_NAME>
-            <SIGNAL>ad1:ch5</SIGNAL>
-            <MARKERS>ad1:signals:ch5</MARKERS>
+            <SIGNAL>ad1:ch6</SIGNAL>
+            <MARKERS>ad1:signals:ch6</MARKERS>
             <SIGNAL_NAME>AC3 IN REVERSE</SIGNAL_NAME>
             <counts>counts:AC3INREV</counts>
             <power_MW>power_MW:AC3NREV</power_MW>
