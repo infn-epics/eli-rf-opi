@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-29 16:55:33 by beatr-->
+<!--Saved on 2026-01-29 18:52:31 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -232,8 +232,8 @@ if value=="Error":
     widget.setPropertyValue('on_label', "Error")
 
 if value=="Off":
-    widget.setPropertyValue('on_color', ColorFontUtil.GREEN)
-    widget.setPropertyValue('on_label', "MOD \n OFF")
+    widget.setPropertyValue('on_color', ColorFontUtil.getColorFromRGB(60, 100,60))
+    widget.setPropertyValue('on_label', "MOD\n OFF")
 ]]></text>
           <pv_name>LEL:MOD:SCAT:MOD01:STATE_RB</pv_name>
         </script>
@@ -648,8 +648,8 @@ if value=="Error":
     widget.setPropertyValue('on_label', "Error")
 
 if value=="Off":
-    widget.setPropertyValue('on_color', ColorFontUtil.GREEN)
-    widget.setPropertyValue('on_label', "MOD \n OFF")
+    widget.setPropertyValue('on_color', ColorFontUtil.getColorFromRGB(60, 100,60))
+    widget.setPropertyValue('on_label', "MOD\n OFF")
 ]]></text>
           <pv_name>LEL:MOD:SCAT:MOD02:STATE_RB</pv_name>
         </script>
@@ -1067,11 +1067,8 @@ if value=="Error":
 
 if value=="Off":
     widget.setPropertyValue('on_color', ColorFontUtil.getColorFromRGB(60, 100,60))
-    widget.setPropertyValue('on_label', "MOD \n OFF")
-
-if value=="Initialize":
-    widget.setPropertyValue('on_color', ColorFontUtil.getColorFromRGB(60, 100,60))
-    widget.setPropertyValue('on_label', "INIT")]]></text>
+    widget.setPropertyValue('on_label', "MOD\n OFF")
+]]></text>
           <pv_name>LEL:MOD:SCAT:MOD03:STATE_RB</pv_name>
         </script>
       </scripts>
@@ -1487,11 +1484,8 @@ if value=="Error":
 
 if value=="Off":
     widget.setPropertyValue('on_color', ColorFontUtil.getColorFromRGB(60, 100,60))
-    widget.setPropertyValue('on_label', "MOD \n OFF")
-
-if value=="Initialize":
-    widget.setPropertyValue('on_color', ColorFontUtil.getColorFromRGB(60, 100,60))
-    widget.setPropertyValue('on_label', "INIT")]]></text>
+    widget.setPropertyValue('on_label', "MOD\n OFF")
+]]></text>
           <pv_name>LEL:MOD:SCAT:MOD04:STATE_RB</pv_name>
         </script>
       </scripts>
