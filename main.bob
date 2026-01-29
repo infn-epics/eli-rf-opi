@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-27 16:08:47 by beatr-->
+<!--Saved on 2026-01-29 16:46:11 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -834,20 +834,20 @@ if value == 0:
 from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
 
 value = PVUtil.getDouble(pvs[0])
-if value <0.548:	#3 mW
+if value <0.4:
 	widget.setPropertyValue('fill_color', ColorFontUtil.PURPLE)
-elif 0.548<=value<0.949:		# 3<value<9 mW
+elif 0.4<=value<0.8:		
 	widget.setPropertyValue('fill_color', ColorFontUtil.GREEN)
-elif 0.949<=value<1:	        # 9<value<10 mW
+elif 0.8<=value<0.85:	       
 	widget.setPropertyValue('fill_color', ColorFontUtil.YELLOW)
-elif value>=1:	# 10 mW
+elif value>=0.85:	
 	widget.setPropertyValue('fill_color', ColorFontUtil.RED)	
 ]]></text>
         <pv_name>LEL-RF-LLRF02:ad1:ch8:amp_average_s.AVERAGE</pv_name>
       </script>
     </scripts>
     <limits_from_pv>false</limits_from_pv>
-    <maximum>1.05</maximum>
+    <maximum>0.9</maximum>
   </widget>
   <widget type="group" version="3.0.0">
     <name>STATUS RF3</name>
@@ -1256,20 +1256,20 @@ if value == 0:
 from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
 
 value = PVUtil.getDouble(pvs[0])
-if value <0.548:	#3 mW
+if value <0.4:	
 	widget.setPropertyValue('fill_color', ColorFontUtil.PURPLE)
-elif 0.548<=value<0.949:		# 3<value<9 mW
+elif 0.4<=value<0.85:		
 	widget.setPropertyValue('fill_color', ColorFontUtil.GREEN)
-elif 0.949<=value<1:	        # 9<value<10 mW
+elif 0.85<=value<0.9:	        
 	widget.setPropertyValue('fill_color', ColorFontUtil.YELLOW)
-elif value>=1:	# 10 mW
+elif value>=0.9:	
 	widget.setPropertyValue('fill_color', ColorFontUtil.RED)	
 ]]></text>
         <pv_name>LEL-RF-LLRF03:ad1:ch8:amp_average_s.AVERAGE</pv_name>
       </script>
     </scripts>
     <limits_from_pv>false</limits_from_pv>
-    <maximum>1.05</maximum>
+    <maximum>0.95</maximum>
   </widget>
   <widget type="group" version="3.0.0">
     <name>STATUS RF4</name>
@@ -1636,20 +1636,20 @@ if value == 0:
 from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
 
 value = PVUtil.getDouble(pvs[0])
-if value <0.548:	#3 mW
+if value <0.548:	
 	widget.setPropertyValue('fill_color', ColorFontUtil.PURPLE)
-elif 0.548<=value<0.949:		# 3<value<9 mW
+elif 0.548<=value<1:		
 	widget.setPropertyValue('fill_color', ColorFontUtil.GREEN)
-elif 0.949<=value<1:	        # 9<value<10 mW
+elif 1<=value<1.2:	        
 	widget.setPropertyValue('fill_color', ColorFontUtil.YELLOW)
-elif value>=1:	# 10 mW
+elif value>=1.2:
 	widget.setPropertyValue('fill_color', ColorFontUtil.RED)	
 ]]></text>
         <pv_name>LEL-RF-LLRF04:ad1:ch8:amp_average_s.AVERAGE</pv_name>
       </script>
     </scripts>
     <limits_from_pv>false</limits_from_pv>
-    <maximum>1.05</maximum>
+    <maximum>1.24</maximum>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>Open waveform line 4</name>
@@ -1853,13 +1853,12 @@ widget.setPropertyValue("text", text)]]></text>
       <horizontal_alignment>1</horizontal_alignment>
       <scripts>
         <script file="EmbeddedPy">
-          <text><![CDATA[# Embedded python script
-from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
 
 value_V = (PVUtil.getDouble(pvs[0])**2)/100
-value_MW=round(value_V/1e6,1)
-um_power=" MW"
-text =str(value_MW) + um_power
+value_W=round(value_V,1)
+um_power=" W"
+text =str(value_W) + um_power
 widget.setPropertyValue("text", text)]]></text>
           <pv_name>LEL-RF-LLRF02:ad1:ch2:amp_average_s.AVERAGE</pv_name>
         </script>
@@ -2395,13 +2394,12 @@ widget.setPropertyValue("text", text)]]></text>
       <horizontal_alignment>1</horizontal_alignment>
       <scripts>
         <script file="EmbeddedPy">
-          <text><![CDATA[# Embedded python script
-from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
 
 value_V = (PVUtil.getDouble(pvs[0])**2)/100
-value_MW=round(value_V/1e6,1)
-um_power=" MW"
-text =str(value_MW) + um_power
+value_W=round(value_V,1)
+um_power=" W"
+text =str(value_W) + um_power
 widget.setPropertyValue("text", text)]]></text>
           <pv_name>LEL-RF-LLRF03:ad1:ch2:amp_average_s.AVERAGE</pv_name>
         </script>
@@ -2794,13 +2792,12 @@ widget.setPropertyValue("text", text)]]></text>
       <horizontal_alignment>1</horizontal_alignment>
       <scripts>
         <script file="EmbeddedPy">
-          <text><![CDATA[# Embedded python script
-from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
 
 value_V = (PVUtil.getDouble(pvs[0])**2)/100
-value_MW=round(value_V/1e6,1)
-um_power=" MW"
-text =str(value_MW) + um_power
+value_W=round(value_V,1)
+um_power=" W"
+text =str(value_W) + um_power
 widget.setPropertyValue("text", text)]]></text>
           <pv_name>LEL-RF-LLRF04:ad1:ch2:amp_average_s.AVERAGE</pv_name>
         </script>
@@ -3022,13 +3019,12 @@ widget.setPropertyValue("text", text)]]></text>
       <horizontal_alignment>1</horizontal_alignment>
       <scripts>
         <script file="EmbeddedPy">
-          <text><![CDATA[# Embedded python script
-from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
 
 value_V = (PVUtil.getDouble(pvs[0])**2)/100
-value_MW=round(value_V/1e6,1)
-um_power=" MW"
-text =str(value_MW) + um_power
+value_W=round(value_V,1)
+um_power=" W"
+text =str(value_W) + um_power
 widget.setPropertyValue("text", text)]]></text>
           <pv_name>LEL-RF-LLRF01:ad1:ch2:amp_average_s.AVERAGE</pv_name>
         </script>

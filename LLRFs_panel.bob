@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-27 09:20:09 by beatr-->
+<!--Saved on 2026-01-29 16:46:02 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>550</width>
@@ -1258,20 +1258,20 @@ else:
 from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
 
 value = PVUtil.getDouble(pvs[0])
-if value <0.548:	#3 mW
+if value <0.4:
 	widget.setPropertyValue('fill_color', ColorFontUtil.PURPLE)
-elif 0.548<=value<0.949:		# 3<value<9 mW
+elif 0.4<=value<0.8:		
 	widget.setPropertyValue('fill_color', ColorFontUtil.GREEN)
-elif 0.949<=value<1:	        # 9<value<10 mW
+elif 0.8<=value<0.85:	       
 	widget.setPropertyValue('fill_color', ColorFontUtil.YELLOW)
-elif value>=1:	# 10 mW
+elif value>=0.85:	
 	widget.setPropertyValue('fill_color', ColorFontUtil.RED)	
 ]]></text>
           <pv_name>LEL-RF-LLRF02:ad1:ch8:amp_average_s.AVERAGE</pv_name>
         </script>
       </scripts>
       <limits_from_pv>false</limits_from_pv>
-      <maximum>1.05</maximum>
+      <maximum>0.9</maximum>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_Interlock_10</name>
@@ -1977,20 +1977,20 @@ if value == 0:
 from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
 
 value = PVUtil.getDouble(pvs[0])
-if value <0.548:	#3 mW
+if value <0.4:	
 	widget.setPropertyValue('fill_color', ColorFontUtil.PURPLE)
-elif 0.548<=value<0.949:		# 3<value<9 mW
+elif 0.4<=value<0.85:		
 	widget.setPropertyValue('fill_color', ColorFontUtil.GREEN)
-elif 0.949<=value<1:	        # 9<value<10 mW
+elif 0.85<=value<0.9:	        
 	widget.setPropertyValue('fill_color', ColorFontUtil.YELLOW)
-elif value>=1:	# 10 mW
+elif value>=0.9:	
 	widget.setPropertyValue('fill_color', ColorFontUtil.RED)	
 ]]></text>
           <pv_name>LEL-RF-LLRF03:ad1:ch8:amp_average_s.AVERAGE</pv_name>
         </script>
       </scripts>
       <limits_from_pv>false</limits_from_pv>
-      <maximum>1.05</maximum>
+      <maximum>0.95</maximum>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -2643,20 +2643,20 @@ if value == 0:
 from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
 
 value = PVUtil.getDouble(pvs[0])
-if value <0.548:	#3 mW
+if value <0.548:	
 	widget.setPropertyValue('fill_color', ColorFontUtil.PURPLE)
-elif 0.548<=value<0.949:		# 3<value<9 mW
+elif 0.548<=value<1:		
 	widget.setPropertyValue('fill_color', ColorFontUtil.GREEN)
-elif 0.949<=value<1:	        # 9<value<10 mW
+elif 1<=value<1.2:	        
 	widget.setPropertyValue('fill_color', ColorFontUtil.YELLOW)
-elif value>=1:	# 10 mW
+elif value>=1.2:
 	widget.setPropertyValue('fill_color', ColorFontUtil.RED)	
 ]]></text>
           <pv_name>LEL-RF-LLRF04:ad1:ch8:amp_average_s.AVERAGE</pv_name>
         </script>
       </scripts>
       <limits_from_pv>false</limits_from_pv>
-      <maximum>1.05</maximum>
+      <maximum>1.24</maximum>
     </widget>
   </widget>
 </display>
