@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-10-08 12:43:13 by beatr-->
+<!--Saved on 2026-02-06 14:52:32 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>1535</width>
-  <height>729</height>
+  <height>952</height>
   <widget type="group" version="3.0.0">
     <name>$(CONDITIONING_IOC)</name>
     <x>11</x>
@@ -983,5 +983,190 @@ for i in range(len(labels)):
         </trace>
       </traces>
     </widget>
+  </widget>
+  <widget type="xyplot" version="3.0.0">
+    <name>X/Y Plot</name>
+    <x>29</x>
+    <y>740</y>
+    <width>320</width>
+    <height>210</height>
+    <show_toolbar>true</show_toolbar>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+print(widget.getProperties())
+# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))]]></text>
+        <pv_name>$(LLRF_NAME):ad1:ch6:power_remote.POWER</pv_name>
+      </script>
+    </scripts>
+    <x_axis>
+      <title>X</title>
+      <autoscale>true</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>10.0</maximum>
+      <show_grid>false</show_grid>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title>power</title>
+        <autoscale>false</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>1000000.0</maximum>
+        <show_grid>false</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <on_right>false</on_right>
+        <visible>true</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+      <y_axis>
+        <title>mask high</title>
+        <autoscale>false</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>1000000.0</maximum>
+        <show_grid>false</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <on_right>false</on_right>
+        <visible>false</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <x_pv>$(LLRF_NAME):app:time_vector</x_pv>
+        <y_pv>$(LLRF_NAME):ad1:ch6:power_remote.POWER</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>2</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>$(traces[1].y_pv)</name>
+        <x_pv>$(LLRF_NAME):app:time_vector</x_pv>
+        <y_pv>$(CONDITIONING_IOC):WF_MASK_HIGH</y_pv>
+        <err_pv></err_pv>
+        <axis>1</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>1</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+    <marker>
+      <marker>
+        <color>
+          <color red="179" green="179" blue="179">
+          </color>
+        </color>
+        <pv_name>$(CONDITIONING_IOC):WF_OFFSET_CURS_US</pv_name>
+        <interactive>true</interactive>
+      </marker>
+      <marker>
+        <color>
+          <color red="179" green="179" blue="179">
+          </color>
+        </color>
+        <pv_name>='$(CONDITIONING_IOC):WF_DURATION_CURS_US'+'$(CONDITIONING_IOC):WF_OFFSET_CURS_US'</pv_name>
+        <interactive>true</interactive>
+      </marker>
+    </marker>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box</name>
+    <pv_name>$(CONDITIONING_IOC):WF_SOURCE_SUFFIX</pv_name>
+    <x>400</x>
+    <y>750</y>
+    <width>171</width>
+    <height>40</height>
+    <items_from_pv>false</items_from_pv>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>$(CONDITIONING_IOC):WF_PULSE_INTLK_ENABLE</pv_name>
+    <x>400</x>
+    <y>800</y>
+    <width>81</width>
+    <height>40</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(CONDITIONING_IOC):WF_MASK_PERCENT</pv_name>
+    <x>390</x>
+    <y>850</y>
+    <width>150</width>
+    <height>70</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_1</name>
+    <pv_name>$(CONDITIONING_IOC):WF_OFFSET_CURS_US</pv_name>
+    <x>664</x>
+    <y>779</y>
+    <width>150</width>
+    <height>70</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_2</name>
+    <pv_name>$(CONDITIONING_IOC):WF_DURATION_CURS_US</pv_name>
+    <x>664</x>
+    <y>860</y>
+    <width>150</width>
+    <height>70</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>SSRIP:RF:CONDITIONING01:WF_MASK_HIGH</pv_name>
+    <x>650</x>
+    <y>600</y>
+    <width>270</width>
+    <height>90</height>
+    <format>2</format>
+    <precision>20</precision>
   </widget>
 </display>

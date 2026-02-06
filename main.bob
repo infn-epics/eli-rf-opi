@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-03 12:53:00 by beatr-->
+<!--Saved on 2026-02-04 13:15:03 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -369,16 +369,16 @@ if value == 0:
         <file>conditioning_panel.bob</file>
         <macros>
           <CONDITIONING_IOC>SSRIP:RF:CONDITIONING01</CONDITIONING_IOC>
-          <LLRF_NAME>LEL-RF-LLRF01</LLRF_NAME>
-          <power_average_cond>power_average_cond:LEL-RF-LLRF01</power_average_cond>
-          <vacuum_table>vacuum_table:LEL-RF-LLRF01</vacuum_table>
+          <LLRF_NAME>sparcdev1</LLRF_NAME>
+          <power_average_cond>power_average_cond:sparcdev1</power_average_cond>
+          <vacuum_table>vacuum_table:sparcdev1</vacuum_table>
           <trigger_apply_table>trigger_apply_table01</trigger_apply_table>
           <PUMP1>VAC:GUNVPC:GUNSIP01</PUMP1>
           <PUMP2>VAC:GUNVPC:GUNSIP02</PUMP2>
           <PUMP3>VAC:GUNVGC:GUNVGA01</PUMP3>
           <power_MW_cond>power_MW_cond:01</power_MW_cond>
           <boolean_cond>boolean_cond:01</boolean_cond>
-          <PREF>SSRIP</PREF>
+          <PREF>SPARC</PREF>
           <SUFF>PRES_RB</SUFF>
           <PUMP4>VAC:KLY12VPC:KLY1SIP1</PUMP4>
           <PUMP5>VAC:KLY1VPC:W1DSIP01</PUMP5>
