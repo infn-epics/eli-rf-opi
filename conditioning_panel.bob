@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-06 14:52:32 by beatr-->
+<!--Saved on 2026-02-10 15:55:49 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>1535</width>
@@ -553,9 +553,9 @@ conditioning_status=PVUtil.getDouble(pvs[2])
       <widget type="bool_button" version="2.0.0">
         <name>Conditioning_Button</name>
         <pv_name>$(CONDITIONING_IOC):CONDITIONING_STATUS</pv_name>
-        <x>20</x>
+        <x>16</x>
         <y>17</y>
-        <width>150</width>
+        <width>155</width>
         <off_label>Conditioning Off</off_label>
         <off_color>
           <color name="MAJOR" red="255" green="0" blue="0">
@@ -734,6 +734,23 @@ else:
           </font>
         </font>
         <square>true</square>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>Boolean Button</name>
+        <pv_name>$(CONDITIONING_IOC):WF_PULSE_INTLK_ENABLE</pv_name>
+        <x>16</x>
+        <y>54</y>
+        <width>155</width>
+        <off_label>Waveform Intlk Off</off_label>
+        <off_color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </off_color>
+        <on_label>Waveform Intlk On</on_label>
+        <font>
+          <font family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
       </widget>
     </widget>
   </widget>
@@ -985,23 +1002,26 @@ for i in range(len(labels)):
     </widget>
   </widget>
   <widget type="xyplot" version="3.0.0">
-    <name>X/Y Plot</name>
+    <name>mask_plot</name>
     <x>29</x>
-    <y>740</y>
-    <width>320</width>
-    <height>210</height>
+    <y>713</y>
+    <width>392</width>
+    <height>237</height>
     <show_toolbar>true</show_toolbar>
+    <show_legend>false</show_legend>
     <scripts>
       <script file="EmbeddedPy">
-        <text><![CDATA[# Embedded python script
-from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
-print(widget.getProperties())
-# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))]]></text>
+        <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+min=widget.getPropertyValue('y_axes[0].minimum')
+max=widget.getPropertyValue('y_axes[0].maximum')
+widget.setPropertyValue('y_axes[1].minimum', min)
+widget.setPropertyValue('y_axes[1].maximum', max)]]></text>
         <pv_name>$(LLRF_NAME):ad1:ch6:power_remote.POWER</pv_name>
+        <pv_name trigger="false">$(CONDITIONING_IOC):WF_SOURCE_SEL</pv_name>
       </script>
     </scripts>
     <x_axis>
-      <title>X</title>
+      <title>Time [us]</title>
       <autoscale>true</autoscale>
       <log_scale>false</log_scale>
       <minimum>0.0</minimum>
@@ -1019,8 +1039,8 @@ print(widget.getProperties())
     </x_axis>
     <y_axes>
       <y_axis>
-        <title>power</title>
-        <autoscale>false</autoscale>
+        <title></title>
+        <autoscale>true</autoscale>
         <log_scale>false</log_scale>
         <minimum>0.0</minimum>
         <maximum>1000000.0</maximum>
@@ -1044,8 +1064,8 @@ print(widget.getProperties())
         <title>mask high</title>
         <autoscale>false</autoscale>
         <log_scale>false</log_scale>
-        <minimum>0.0</minimum>
-        <maximum>1000000.0</maximum>
+        <minimum></minimum>
+        <maximum></maximum>
         <show_grid>false</show_grid>
         <title_font>
           <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -1119,26 +1139,74 @@ print(widget.getProperties())
     </marker>
   </widget>
   <widget type="combo" version="2.0.0">
-    <name>Combo Box</name>
-    <pv_name>$(CONDITIONING_IOC):WF_SOURCE_SUFFIX</pv_name>
-    <x>400</x>
-    <y>750</y>
-    <width>171</width>
+    <name>ComboBox_1</name>
+    <pv_name>loc://$(channel_sel)&lt;VString&gt;</pv_name>
+    <x>680</x>
+    <y>780</y>
+    <width>152</width>
     <height>40</height>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+
+channel_sel= PVUtil.getString(pvs[1])
+wf_sel=int(PVUtil.getDouble(pvs[0]))
+
+item1=widget.getPropertyValue('items[0]')
+item2=widget.getPropertyValue('items[1]')
+item3=widget.getPropertyValue('items[2]')
+item4=widget.getPropertyValue('items[3]')
+item5=widget.getPropertyValue('items[4]')
+item6=widget.getPropertyValue('items[5]')
+
+if channel_sel is None or channel_sel == "":
+    if wf_sel == 0: PVUtil.writePV(str(pvs[1]), item1, 1)
+    elif wf_sel == 1: PVUtil.writePV(str(pvs[1]), item2, 1)
+    elif wf_sel == 2: PVUtil.writePV(str(pvs[1]), item3, 1)
+    elif wf_sel == 3: PVUtil.writePV(str(pvs[1]), item4, 1)
+    elif wf_sel == 4: PVUtil.writePV(str(pvs[1]), item5, 1)
+    elif wf_sel == 5: PVUtil.writePV(str(pvs[1]), item6, 1)
+
+mask_graph = ScriptUtil.findWidgetByName(widget, 'mask_plot')
+
+if channel_sel==item1: PVUtil.writePV(str(pvs[0]),0,1); mask_graph.setPropertyValue('y_axes[0].title',item1)
+elif channel_sel==item2: PVUtil.writePV(str(pvs[0]),1,1); mask_graph.setPropertyValue('y_axes[0].title',item2)
+elif channel_sel==item3: PVUtil.writePV(str(pvs[0]),2,1); mask_graph.setPropertyValue('y_axes[0].title',item3)
+elif channel_sel==item4: PVUtil.writePV(str(pvs[0]),3,1); mask_graph.setPropertyValue('y_axes[0].title',item4)
+elif channel_sel==item5: PVUtil.writePV(str(pvs[0]),4,1); mask_graph.setPropertyValue('y_axes[0].title',item5)
+elif channel_sel==item6: PVUtil.writePV(str(pvs[0]),5,1); mask_graph.setPropertyValue('y_axes[0].title',item6)]]></text>
+        <pv_name trigger="false">$(CONDITIONING_IOC):WF_SOURCE_SEL</pv_name>
+        <pv_name>loc://$(channel_sel)</pv_name>
+      </script>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+
+sel=PVUtil.getStringArray(pvs[0])
+a=int(PVUtil.getDouble(pvs[1]))
+
+mask_graph = ScriptUtil.findWidgetByName(widget, 'mask_plot')
+mask_graph.setPropertyValue('traces[0].y_pv',sel[a])
+print(sel[a])
+]]></text>
+        <pv_name trigger="false">$(CONDITIONING_IOC):WF_SOURCE_SUFFIX</pv_name>
+        <pv_name>$(CONDITIONING_IOC):WF_SOURCE_SEL</pv_name>
+      </script>
+    </scripts>
+    <items>
+      <item>$(selection1)</item>
+      <item>$(selection2)</item>
+      <item>$(selection3)</item>
+      <item>$(selection4)</item>
+      <item>$(selection5)</item>
+      <item>$(selection6)</item>
+    </items>
     <items_from_pv>false</items_from_pv>
-  </widget>
-  <widget type="bool_button" version="2.0.0">
-    <name>Boolean Button</name>
-    <pv_name>$(CONDITIONING_IOC):WF_PULSE_INTLK_ENABLE</pv_name>
-    <x>400</x>
-    <y>800</y>
-    <width>81</width>
-    <height>40</height>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry</name>
     <pv_name>$(CONDITIONING_IOC):WF_MASK_PERCENT</pv_name>
-    <x>390</x>
+    <x>690</x>
     <y>850</y>
     <width>150</width>
     <height>70</height>
@@ -1146,27 +1214,25 @@ print(widget.getProperties())
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_1</name>
     <pv_name>$(CONDITIONING_IOC):WF_OFFSET_CURS_US</pv_name>
-    <x>664</x>
-    <y>779</y>
+    <x>850</x>
+    <y>770</y>
     <width>150</width>
     <height>70</height>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_2</name>
     <pv_name>$(CONDITIONING_IOC):WF_DURATION_CURS_US</pv_name>
-    <x>664</x>
-    <y>860</y>
+    <x>853</x>
+    <y>850</y>
     <width>150</width>
     <height>70</height>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
-    <pv_name>SSRIP:RF:CONDITIONING01:WF_MASK_HIGH</pv_name>
-    <x>650</x>
-    <y>600</y>
-    <width>270</width>
-    <height>90</height>
-    <format>2</format>
-    <precision>20</precision>
+    <pv_name>$(CONDITIONING_IOC):WF_SOURCE_SEL</pv_name>
+    <x>630</x>
+    <y>690</y>
+    <width>150</width>
+    <height>50</height>
   </widget>
 </display>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-04 13:15:03 by beatr-->
+<!--Saved on 2026-02-10 09:08:43 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -390,6 +390,13 @@ if value == 0:
           <PUMP11>VAC:GUNVPC:GUNSIP01</PUMP11>
           <PUMP12>VAC:GUNVPC:GUNSIP01</PUMP12>
           <PUMP13>VAC:GUNVPC:GUNSIP01</PUMP13>
+          <selection1>Gun_Probe</selection1>
+          <selection2>Driver_FDW</selection2>
+          <selection3>Klystron1_FDW</selection3>
+          <selection4>Klystron1_REV</selection4>
+          <selection5>Gun_FDW</selection5>
+          <selection6>Gun_REV</selection6>
+          <channel_sel>channel_sel:line1</channel_sel>
         </macros>
         <target>window</target>
       </action>
