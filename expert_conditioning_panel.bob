@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-11 14:35:09 by beatr-->
+<!--Saved on 2026-02-11 16:07:48 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
-  <width>933</width>
+  <width>840</width>
   <height>460</height>
   <widget type="group" version="3.0.0">
     <name>Expert Panel:$(CONDITIONING_IOC)</name>
-    <width>933</width>
+    <width>840</width>
     <height>460</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="14.0">
@@ -19,7 +19,7 @@
     <transparent>true</transparent>
     <widget type="group" version="3.0.0">
       <name>Power Raise</name>
-      <x>525</x>
+      <x>539</x>
       <y>1</y>
       <width>261</width>
       <height>162</height>
@@ -95,12 +95,12 @@
     <widget type="group" version="3.0.0">
       <name>Waveform pulse to pulse</name>
       <y>158</y>
-      <width>898</width>
+      <width>800</width>
       <height>273</height>
       <transparent>true</transparent>
       <widget type="xyplot" version="3.0.0">
         <name>mask_plot</name>
-        <width>392</width>
+        <width>446</width>
         <height>237</height>
         <show_toolbar>true</show_toolbar>
         <show_legend>false</show_legend>
@@ -278,8 +278,8 @@ widget.setPropertyValue('y_axes[2].maximum', max)]]></text>
       <widget type="combo" version="2.0.0">
         <name>ComboBox_1</name>
         <pv_name>loc://$(channel_sel)&lt;VString&gt;</pv_name>
-        <x>396</x>
-        <y>5</y>
+        <x>473</x>
+        <y>3</y>
         <width>136</width>
         <scripts>
           <script file="EmbeddedPy">
@@ -342,8 +342,8 @@ print(sel[a])
       <widget type="textentry" version="3.0.0">
         <name>Tollerance</name>
         <pv_name>$(CONDITIONING_IOC):WF_MASK_PERCENT</pv_name>
-        <x>433</x>
-        <y>64</y>
+        <x>614</x>
+        <y>46</y>
         <width>60</width>
         <height>26</height>
         <precision>1</precision>
@@ -352,8 +352,8 @@ print(sel[a])
       <widget type="textentry" version="3.0.0">
         <name>offset_curs</name>
         <pv_name>$(CONDITIONING_IOC):WF_OFFSET_CURS_US</pv_name>
-        <x>433</x>
-        <y>124</y>
+        <x>614</x>
+        <y>94</y>
         <width>60</width>
         <height>26</height>
         <format>1</format>
@@ -363,94 +363,19 @@ print(sel[a])
       <widget type="textentry" version="3.0.0">
         <name>duration_curs</name>
         <pv_name>$(CONDITIONING_IOC):WF_DURATION_CURS_US</pv_name>
-        <x>433</x>
-        <y>184</y>
+        <x>614</x>
+        <y>143</y>
         <width>60</width>
         <height>26</height>
         <format>1</format>
         <precision>3</precision>
         <horizontal_alignment>1</horizontal_alignment>
       </widget>
-      <widget type="xyplot" version="3.0.0">
-        <name>X/Y Plot</name>
-        <x>538</x>
-        <y>5</y>
-        <width>324</width>
-        <height>232</height>
-        <title>Post Mortem Pulse</title>
-        <title_font>
-          <font family="Liberation Sans" style="BOLD" size="12.0">
-          </font>
-        </title_font>
-        <show_toolbar>true</show_toolbar>
-        <show_legend>false</show_legend>
-        <tooltip></tooltip>
-        <x_axis>
-          <title>Time [us]</title>
-          <autoscale>true</autoscale>
-          <log_scale>false</log_scale>
-          <minimum>0.0</minimum>
-          <maximum>100.0</maximum>
-          <show_grid>false</show_grid>
-          <title_font>
-            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-            </font>
-          </title_font>
-          <scale_font>
-            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
-            </font>
-          </scale_font>
-          <visible>true</visible>
-        </x_axis>
-        <y_axes>
-          <y_axis>
-            <title>Power [W]</title>
-            <autoscale>true</autoscale>
-            <log_scale>false</log_scale>
-            <minimum>0.0</minimum>
-            <maximum>100.0</maximum>
-            <show_grid>false</show_grid>
-            <title_font>
-              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-              </font>
-            </title_font>
-            <scale_font>
-              <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
-              </font>
-            </scale_font>
-            <on_right>false</on_right>
-            <visible>true</visible>
-            <color>
-              <color name="Text" red="0" green="0" blue="0">
-              </color>
-            </color>
-          </y_axis>
-        </y_axes>
-        <traces>
-          <trace>
-            <name></name>
-            <x_pv>$(LLRF_NAME):app:time_vector</x_pv>
-            <y_pv>$(CONDITIONING_IOC):WF_PULSE_POSTMORTEM</y_pv>
-            <err_pv></err_pv>
-            <axis>0</axis>
-            <trace_type>1</trace_type>
-            <color>
-              <color red="26" green="51" blue="153">
-              </color>
-            </color>
-            <line_width>2</line_width>
-            <line_style>0</line_style>
-            <point_type>0</point_type>
-            <point_size>10</point_size>
-            <visible>true</visible>
-          </trace>
-        </traces>
-      </widget>
       <widget type="label" version="2.0.0">
         <name>Cursor_offset_label</name>
         <text>Cursor offset [us]:</text>
-        <x>400</x>
-        <y>104</y>
+        <x>474</x>
+        <y>99</y>
         <width>111</width>
         <height>16</height>
         <foreground_color>
@@ -462,8 +387,8 @@ print(sel[a])
       <widget type="label" version="2.0.0">
         <name>Cursor_duration_label_1</name>
         <text>Cursor duration [us]:</text>
-        <x>400</x>
-        <y>165</y>
+        <x>474</x>
+        <y>148</y>
         <width>127</width>
         <height>16</height>
         <foreground_color>
@@ -475,8 +400,8 @@ print(sel[a])
       <widget type="label" version="2.0.0">
         <name>Mask_tollerance_label</name>
         <text>Mask tollerance [%]:</text>
-        <x>400</x>
-        <y>46</y>
+        <x>474</x>
+        <y>51</y>
         <width>127</width>
         <height>16</height>
         <foreground_color>
@@ -489,7 +414,7 @@ print(sel[a])
     <widget type="group" version="3.0.0">
       <name>Vacuum settings</name>
       <y>1</y>
-      <width>535</width>
+      <width>539</width>
       <height>162</height>
       <transparent>true</transparent>
       <widget type="table" version="2.0.0">
@@ -576,7 +501,7 @@ else:
       <widget type="textentry" version="3.0.0">
         <name>Intlk Hysteresis</name>
         <pv_name>$(CONDITIONING_IOC):INTLK_HYSTERESIS</pv_name>
-        <x>368</x>
+        <x>444</x>
         <width>60</width>
         <height>26</height>
         <format>1</format>
@@ -584,11 +509,35 @@ else:
         <horizontal_alignment>1</horizontal_alignment>
       </widget>
       <widget type="label" version="2.0.0">
-        <name>Hysteresis_Label</name>
-        <text>Hysteresis:</text>
+        <name>Power_reduction_label</name>
+        <text>Power reduction factor:</text>
         <x>291</x>
         <y>5</y>
-        <width>70</width>
+        <width>144</width>
+        <height>16</height>
+        <foreground_color>
+          <color red="51" green="26" blue="128">
+          </color>
+        </foreground_color>
+        <auto_size>true</auto_size>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Intlk Hysteresis_1</name>
+        <pv_name>$(CONDITIONING_IOC):VAC_THRESHOLD_REENABLE</pv_name>
+        <x>446</x>
+        <y>42</y>
+        <width>60</width>
+        <height>26</height>
+        <format>1</format>
+        <precision>2</precision>
+        <horizontal_alignment>1</horizontal_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Vacuum_enable_factor_label</name>
+        <text>Vacuum enable factor:</text>
+        <x>291</x>
+        <y>47</y>
+        <width>141</width>
         <height>16</height>
         <foreground_color>
           <color red="51" green="26" blue="128">

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-11 14:40:58 by beatr-->
+<!--Saved on 2026-02-11 15:59:09 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>1535</width>
-  <height>816</height>
+  <height>898</height>
   <widget type="group" version="3.0.0">
     <name>$(CONDITIONING_IOC)</name>
     <x>11</x>
     <y>2</y>
     <width>585</width>
-    <height>792</height>
+    <height>858</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -19,7 +19,7 @@
       <name>Vacuum_table_meas</name>
       <y>292</y>
       <width>551</width>
-      <height>408</height>
+      <height>318</height>
       <columns>
         <column>
           <name>VACUUM PUMPS</name>
@@ -265,46 +265,6 @@ if int(PVUtil.getDouble(pvs[2]))==1:
         <limits_from_pv>false</limits_from_pv>
         <maximum>1.0E20</maximum>
       </widget>
-    </widget>
-    <widget type="action_button" version="3.0.0">
-      <name>expert_panel_button</name>
-      <actions>
-        <action type="execute">
-          <description>Execute Script</description>
-          <script file="EmbeddedPy">
-            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
-from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
-
-expert_panel = ScriptUtil.findWidgetByName(widget, 'Expert_Panel')
-status=expert_panel.getPropertyValue('visible')
-print(status)
-if status==1:
-	expert_panel.setPropertyValue('visible',False)
-	widget.setPropertyValue('text',"Open Expert Panel")
-	widget.setPropertyValue('background_color',ColorFontUtil.GRAY)
-	widget.setPropertyValue('show_confirm_dialog',True)
-else:
-	expert_panel.setPropertyValue('visible',True)
-	widget.setPropertyValue('text',"Close Expert Panel")
-	widget.setPropertyValue('background_color',ColorFontUtil.RED)
-	widget.setPropertyValue('show_confirm_dialog',False)
-]]></text>
-          </script>
-        </action>
-      </actions>
-      <text>Open Expert Panel</text>
-      <x>206</x>
-      <y>715</y>
-      <width>167</width>
-      <height>36</height>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="15.0">
-        </font>
-      </font>
-      <tooltip>$(actions)</tooltip>
-      <show_confirm_dialog>true</show_confirm_dialog>
-      <confirm_message>Are your sure you want to open expert panel ?</confirm_message>
-      <password>merito</password>
     </widget>
     <widget type="group" version="3.0.0">
       <name>Set Power</name>
@@ -755,12 +715,87 @@ else:
         </font>
       </widget>
     </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>X/Y Plot</name>
+      <x>1</x>
+      <y>617</y>
+      <width>549</width>
+      <height>202</height>
+      <title>Post Mortem Pulse</title>
+      <title_font>
+        <font family="Liberation Sans" style="BOLD" size="12.0">
+        </font>
+      </title_font>
+      <show_toolbar>true</show_toolbar>
+      <show_legend>false</show_legend>
+      <tooltip></tooltip>
+      <x_axis>
+        <title>Time [us]</title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>false</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Power [W]</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100.0</maximum>
+          <show_grid>false</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv>$(LLRF_NAME):app:time_vector</x_pv>
+          <y_pv>$(CONDITIONING_IOC):WF_PULSE_POSTMORTEM</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="26" green="51" blue="153">
+            </color>
+          </color>
+          <line_width>2</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>10</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Expert_Panel</name>
     <file>expert_conditioning_panel.bob</file>
     <x>588</x>
-    <y>334</y>
+    <y>400</y>
     <width>936</width>
     <height>480</height>
     <visible>false</visible>
@@ -773,7 +808,7 @@ else:
     <name>Vacuum_graph</name>
     <x>596</x>
     <y>11</y>
-    <width>917</width>
+    <width>824</width>
     <height>319</height>
     <style>2</style>
     <transparent>true</transparent>
@@ -781,7 +816,7 @@ else:
       <name>Vacuum_strip_chart</name>
       <x>12</x>
       <y>13</y>
-      <width>891</width>
+      <width>801</width>
       <height>287</height>
       <title_font>
         <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
@@ -1002,5 +1037,45 @@ for i in range(len(labels)):
         </trace>
       </traces>
     </widget>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>expert_panel_button</name>
+    <actions>
+      <action type="execute">
+        <description>Execute Script</description>
+        <script file="EmbeddedPy">
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
+
+expert_panel = ScriptUtil.findWidgetByName(widget, 'Expert_Panel')
+status=expert_panel.getPropertyValue('visible')
+print(status)
+if status==1:
+	expert_panel.setPropertyValue('visible',False)
+	widget.setPropertyValue('text',"Open Expert Panel")
+	widget.setPropertyValue('background_color',ColorFontUtil.GRAY)
+	widget.setPropertyValue('show_confirm_dialog',True)
+else:
+	expert_panel.setPropertyValue('visible',True)
+	widget.setPropertyValue('text',"Close Expert Panel")
+	widget.setPropertyValue('background_color',ColorFontUtil.RED)
+	widget.setPropertyValue('show_confirm_dialog',False)
+]]></text>
+        </script>
+      </action>
+    </actions>
+    <text>Open Expert Panel</text>
+    <x>596</x>
+    <y>339</y>
+    <width>167</width>
+    <height>36</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="15.0">
+      </font>
+    </font>
+    <tooltip>$(actions)</tooltip>
+    <show_confirm_dialog>true</show_confirm_dialog>
+    <confirm_message>Are your sure you want to open expert panel ?</confirm_message>
+    <password>merito</password>
   </widget>
 </display>

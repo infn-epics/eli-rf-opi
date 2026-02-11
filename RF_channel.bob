@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-26 17:07:40 by beatr-->
+<!--Saved on 2026-02-11 15:42:46 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>1210</width>
@@ -15,7 +15,7 @@
     <transparent>true</transparent>
     <widget type="combo" version="2.0.0">
       <name>Refresh</name>
-      <pv_name>$(LLRF_NAME):$(SIGNAL):amp_average_s.SCAN</pv_name>
+      <pv_name>$(LLRF_NAME):$(SIGNAL):power_remote.SCAN</pv_name>
       <x>204</x>
       <y>22</y>
       <width>130</width>
@@ -28,15 +28,15 @@
           <text><![CDATA[# Embedded python script
 from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
 
-selected_value = PVUtil.getString(pvs[0])
+selected_value = PVUtil.getString(pvs[3])
 
 for PV in pvs:
     PVUtil.writePV(str(PV), selected_value,1)
 ]]></text>
-          <pv_name>$(LLRF_NAME):$(SIGNAL):amp_average_s.SCAN</pv_name>
+          <pv_name trigger="false">$(LLRF_NAME):$(SIGNAL):amp_average_s.SCAN</pv_name>
           <pv_name trigger="false">$(LLRF_NAME):$(SIGNAL):amp_phase.SCAN</pv_name>
           <pv_name trigger="false">$(LLRF_NAME):$(SIGNAL):phase_average_s.SCAN</pv_name>
-          <pv_name trigger="false">$(LLRF_NAME):$(SIGNAL):power_remote.SCAN</pv_name>
+          <pv_name>$(LLRF_NAME):$(SIGNAL):power_remote.SCAN</pv_name>
         </script>
       </scripts>
       <items>
