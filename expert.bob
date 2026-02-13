@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-13 13:13:44 by root-->
+<!--Saved on 2026-02-13 13:41:06 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>400</width>
@@ -472,7 +472,6 @@
     </font>
     <tooltip>VSWR</tooltip>
     <border_alarm_sensitive>false</border_alarm_sensitive>
-    <show_confirm_dialog>true</show_confirm_dialog>
     <confirm_message>RF member only</confirm_message>
     <password>merito</password>
   </widget>
@@ -538,7 +537,6 @@
     </font>
     <tooltip>VSWR</tooltip>
     <border_alarm_sensitive>false</border_alarm_sensitive>
-    <show_confirm_dialog>true</show_confirm_dialog>
     <confirm_message>RF member only</confirm_message>
     <password>merito</password>
   </widget>
@@ -604,7 +602,6 @@
     </font>
     <tooltip>VSWR</tooltip>
     <border_alarm_sensitive>false</border_alarm_sensitive>
-    <show_confirm_dialog>true</show_confirm_dialog>
     <confirm_message>RF member only</confirm_message>
     <password>merito</password>
   </widget>
@@ -670,7 +667,6 @@
     </font>
     <tooltip>VSWR</tooltip>
     <border_alarm_sensitive>false</border_alarm_sensitive>
-    <show_confirm_dialog>true</show_confirm_dialog>
     <confirm_message>RF member only</confirm_message>
     <password>merito</password>
   </widget>
