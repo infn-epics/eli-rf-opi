@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-10-31 09:17:49 by root-->
+<!--Saved on 2026-02-17 15:18:56 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>1172</width>
@@ -20,8 +20,8 @@ from org.csstudio.display.builder.runtime.script import PVUtil
 power_array=[]
 power_W=PVUtil.getDoubleArray(pvs[0])
 for element in power_W: 
-	power_MW=element/1e6
-	power_array.append(power_MW)
+	power_W=element/1e3
+	power_array.append(power_W)
 PVUtil.writePV(str(pvs[1]), power_array,1)]]></text>
         <pv_name>$(LLRF_NAME):$(SIGNAL1):power_remote.POWER</pv_name>
         <pv_name trigger="false">loc://$(power1)</pv_name>
@@ -46,7 +46,7 @@ PVUtil.writePV(str(pvs[1]), power_array,1)]]></text>
     </x_axis>
     <y_axes>
       <y_axis>
-        <title>Power [MW]</title>
+        <title>Power [kW]</title>
         <autoscale>true</autoscale>
         <log_scale>false</log_scale>
         <minimum>0.0</minimum>
