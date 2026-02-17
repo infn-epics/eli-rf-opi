@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-17 12:04:25 by beatr-->
+<!--Saved on 2026-02-17 12:15:44 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -271,11 +271,11 @@ from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
 value = int(PVUtil.getDouble(pvs[0]))
 if value == 1:
     widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
-    widget.setPropertyValue('on_label', "COND. ON")
+    widget.setPropertyValue('on_label', "COND ON")
 
 if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
-    widget.setPropertyValue('off_label', "COND. OFF")
+    widget.setPropertyValue('off_label', "COND OFF")
 ]]></text>
           <pv_name>SSRIP:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
         </script>
@@ -695,11 +695,11 @@ from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
 value = int(PVUtil.getDouble(pvs[0]))
 if value == 1:
     widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
-    widget.setPropertyValue('on_label', "COND. ON")
+    widget.setPropertyValue('on_label', "COND ON")
 
 if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
-    widget.setPropertyValue('off_label', "COND. OFF")
+    widget.setPropertyValue('off_label', "COND OFF")
 ]]></text>
           <pv_name>SSRIP:RF:CONDITIONING02:CONDITIONING_STATUS</pv_name>
         </script>
@@ -1113,11 +1113,11 @@ from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
 value = int(PVUtil.getDouble(pvs[0]))
 if value == 1:
     widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
-    widget.setPropertyValue('on_label', "COND. ON")
+    widget.setPropertyValue('on_label', "COND ON")
 
 if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
-    widget.setPropertyValue('off_label', "COND. OFF")
+    widget.setPropertyValue('off_label', "COND OFF")
 ]]></text>
           <pv_name>SSRIP:RF:CONDITIONING03:CONDITIONING_STATUS</pv_name>
         </script>
@@ -1478,11 +1478,11 @@ from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
 value = int(PVUtil.getDouble(pvs[0]))
 if value == 1:
     widget.setPropertyValue('on_color', ColorFontUtil.YELLOW)
-    widget.setPropertyValue('on_label', "COND. ON")
+    widget.setPropertyValue('on_label', "COND ON")
 
 if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
-    widget.setPropertyValue('off_label', "COND. OFF")
+    widget.setPropertyValue('off_label', "COND OFF")
 ]]></text>
           <pv_name>SSRIP:RF:CONDITIONING04:CONDITIONING_STATUS</pv_name>
         </script>
