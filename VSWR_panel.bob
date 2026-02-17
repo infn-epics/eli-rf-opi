@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-13 13:12:04 by root-->
+<!--Saved on 2026-02-17 17:47:18 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>901</width>
@@ -484,7 +484,7 @@ PVUtil.writePV(str(pvs[4]), rapporto,1)
                   <pv_name>$(LLRF_NAME):$(SIGNAL1):amp_phase.AMP_REMOTE</pv_name>
                   <pv_name trigger="false">$(LLRF_NAME):$(SIGNAL2):amp_phase.AMP_REMOTE</pv_name>
                   <pv_name trigger="false">$(LLRF_NAME):$(MARKER_OFS2)</pv_name>
-                  <pv_name trigger="false">=$(LLRF_NAME):$(MARKER_OFS2)+$(LLRF_NAME):$(MARKER_DUR2)</pv_name>
+                  <pv_name trigger="false">='$(LLRF_NAME):$(MARKER_OFS2)'+'$(LLRF_NAME):$(MARKER_DUR2)'</pv_name>
                   <pv_name trigger="false">loc://$(RATIO_CH2)</pv_name>
                 </script>
               </scripts>
@@ -601,7 +601,7 @@ PVUtil.writePV(str(pvs[4]), rapporto,1)
                     <color red="128" green="128" blue="128">
                     </color>
                   </color>
-                  <pv_name>=$(LLRF_NAME):$(MARKER_OFS2)+$(LLRF_NAME):$(MARKER_DUR2)</pv_name>
+                  <pv_name>='$(LLRF_NAME):$(MARKER_OFS2)'+'$(LLRF_NAME):$(MARKER_DUR2)'</pv_name>
                   <interactive>true</interactive>
                 </marker>
               </marker>
@@ -1112,7 +1112,7 @@ PVUtil.writePV(str(pvs[4]), rapporto,1)
                   <pv_name>$(LLRF_NAME):$(SIGNAL3):amp_phase.AMP_REMOTE</pv_name>
                   <pv_name trigger="false">$(LLRF_NAME):$(SIGNAL4):amp_phase.AMP_REMOTE</pv_name>
                   <pv_name trigger="false">$(LLRF_NAME):$(MARKER_OFS4)</pv_name>
-                  <pv_name trigger="false">=$(LLRF_NAME):$(MARKER_OFS4)+$(LLRF_NAME):$(MARKER_DUR4)</pv_name>
+                  <pv_name trigger="false">='$(LLRF_NAME):$(MARKER_OFS4)'+'$(LLRF_NAME):$(MARKER_DUR4)'</pv_name>
                   <pv_name trigger="false">loc://$(RATIO_CH4)</pv_name>
                 </script>
               </scripts>
@@ -1229,7 +1229,7 @@ PVUtil.writePV(str(pvs[4]), rapporto,1)
                     <color red="128" green="128" blue="128">
                     </color>
                   </color>
-                  <pv_name>=$(LLRF_NAME):$(MARKER_OFS4)+$(LLRF_NAME):$(MARKER_DUR4)</pv_name>
+                  <pv_name>='$(LLRF_NAME):$(MARKER_OFS4)'+'$(LLRF_NAME):$(MARKER_DUR4)'</pv_name>
                   <interactive>true</interactive>
                 </marker>
               </marker>
@@ -1712,7 +1712,7 @@ PVUtil.writePV(str(pvs[4]), rapporto,1)
                   <pv_name>$(LLRF_NAME):$(SIGNAL5):amp_phase.AMP_REMOTE</pv_name>
                   <pv_name trigger="false">$(LLRF_NAME):$(SIGNAL6):amp_phase.AMP_REMOTE</pv_name>
                   <pv_name trigger="false">$(LLRF_NAME):$(MARKER_OFS6)</pv_name>
-                  <pv_name trigger="false">=$(LLRF_NAME):$(MARKER_OFS6)+$(LLRF_NAME):$(MARKER_DUR6)</pv_name>
+                  <pv_name trigger="false">='$(LLRF_NAME):$(MARKER_OFS6)'+'$(LLRF_NAME):$(MARKER_DUR6)'</pv_name>
                   <pv_name trigger="false">loc://$(RATIO_CH6)</pv_name>
                 </script>
               </scripts>
@@ -1829,7 +1829,7 @@ PVUtil.writePV(str(pvs[4]), rapporto,1)
                     <color red="128" green="128" blue="128">
                     </color>
                   </color>
-                  <pv_name>=$(LLRF_NAME):$(MARKER_OFS6)+$(LLRF_NAME):$(MARKER_DUR6)</pv_name>
+                  <pv_name>='$(LLRF_NAME):$(MARKER_OFS6)'+'$(LLRF_NAME):$(MARKER_DUR6)'</pv_name>
                   <interactive>true</interactive>
                 </marker>
               </marker>
