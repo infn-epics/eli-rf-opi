@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-17 11:30:22 by beatr-->
+<!--Saved on 2026-02-17 12:04:25 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -242,7 +242,7 @@ if value=="Off":
     <widget type="led" version="2.0.0">
       <name>CONDITIONING ON/OFF LLRF3_1</name>
       <class>ON_OFF</class>
-      <pv_name>ELI:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
+      <pv_name>SSRIP:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
       <x>270</x>
       <y>4</y>
       <width>42</width>
@@ -265,8 +265,7 @@ OFF</off_label>
       <square>true</square>
       <scripts>
         <script file="EmbeddedPy">
-          <text><![CDATA[# Embedded python script
-from org.csstudio.display.builder.runtime.script import PVUtil
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
 from org.csstudio.opibuilder.scriptUtil import ColorFontUtil
 
 value = int(PVUtil.getDouble(pvs[0]))
@@ -278,7 +277,7 @@ if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
     widget.setPropertyValue('off_label', "COND. OFF")
 ]]></text>
-          <pv_name>ELI:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
+          <pv_name>SSRIP:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
         </script>
       </scripts>
     </widget>
@@ -303,7 +302,7 @@ if value == 0:
           <boolean_decrease_power>boolean_decrease_power:LLRF1</boolean_decrease_power>
           <ch_VM>ch8</ch_VM>
           <NAME>LLRF1</NAME>
-          <conditioning>CONDITIONING01</conditioning>
+          <conditioning>SSRIP:RF:CONDITIONING01</conditioning>
         </macros>
         <target>window</target>
       </action>
@@ -666,7 +665,7 @@ if value=="Off":
     <widget type="led" version="2.0.0">
       <name>CONDITIONING ON/OFF LLRF2</name>
       <class>ON_OFF</class>
-      <pv_name>ELI:RF:CONDITIONING02:CONDITIONING_STATUS</pv_name>
+      <pv_name>SSRIP:RF:CONDITIONING02:CONDITIONING_STATUS</pv_name>
       <x>270</x>
       <y>4</y>
       <width>42</width>
@@ -702,7 +701,7 @@ if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
     widget.setPropertyValue('off_label', "COND. OFF")
 ]]></text>
-          <pv_name>ELI:RF:CONDITIONING02:CONDITIONING_STATUS</pv_name>
+          <pv_name>SSRIP:RF:CONDITIONING02:CONDITIONING_STATUS</pv_name>
         </script>
       </scripts>
     </widget>
@@ -727,7 +726,7 @@ if value == 0:
           <boolean_decrease_power>boolean_decrease_power:LLRF2</boolean_decrease_power>
           <ch_VM>ch8</ch_VM>
           <NAME>LLRF2</NAME>
-          <conditioning>CONDITIONING02</conditioning>
+          <conditioning>SSRIP:RF:CONDITIONING02</conditioning>
         </macros>
         <target>window</target>
       </action>
@@ -1084,7 +1083,7 @@ if value=="Off":
     <widget type="led" version="2.0.0">
       <name>CONDITIONING ON/OFF LLRF3</name>
       <class>ON_OFF</class>
-      <pv_name>ELI:RF:CONDITIONING03:CONDITIONING_STATUS</pv_name>
+      <pv_name>SSRIP:RF:CONDITIONING03:CONDITIONING_STATUS</pv_name>
       <x>270</x>
       <y>4</y>
       <width>42</width>
@@ -1120,7 +1119,7 @@ if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
     widget.setPropertyValue('off_label', "COND. OFF")
 ]]></text>
-          <pv_name>ELI:RF:CONDITIONING03:CONDITIONING_STATUS</pv_name>
+          <pv_name>SSRIP:RF:CONDITIONING03:CONDITIONING_STATUS</pv_name>
         </script>
       </scripts>
     </widget>
@@ -1145,7 +1144,7 @@ if value == 0:
           <boolean_decrease_power>boolean_decrease_power:LLRF3</boolean_decrease_power>
           <ch_VM>ch8</ch_VM>
           <NAME>LLRF3</NAME>
-          <conditioning>CONDITIONING03</conditioning>
+          <conditioning>SSRIP:RF:CONDITIONING03</conditioning>
         </macros>
         <target>window</target>
       </action>
@@ -1449,7 +1448,7 @@ ON</on_label>
     <widget type="led" version="2.0.0">
       <name>CONDITIONING ON/OFF LLRF4</name>
       <class>ON_OFF</class>
-      <pv_name>ELI:RF:CONDITIONING04:CONDITIONING_STATUS</pv_name>
+      <pv_name>SSRIP:RF:CONDITIONING04:CONDITIONING_STATUS</pv_name>
       <x>270</x>
       <y>4</y>
       <width>42</width>
@@ -1485,7 +1484,7 @@ if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
     widget.setPropertyValue('off_label', "COND. OFF")
 ]]></text>
-          <pv_name>ELI:RF:CONDITIONING04:CONDITIONING_STATUS</pv_name>
+          <pv_name>SSRIP:RF:CONDITIONING04:CONDITIONING_STATUS</pv_name>
         </script>
       </scripts>
     </widget>
@@ -1562,7 +1561,7 @@ if value=="Off":
           <boolean_decrease_power>boolean_decrease_power:LLRF4</boolean_decrease_power>
           <ch_VM>ch8</ch_VM>
           <NAME>LLRF4</NAME>
-          <conditioning>CONDITIONING04</conditioning>
+          <conditioning>SSRIP:RF:CONDITIONING04</conditioning>
         </macros>
         <target>window</target>
       </action>

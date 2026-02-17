@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-30 10:34:14 by beatr-->
+<!--Saved on 2026-02-17 12:05:36 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>570</width>
@@ -581,7 +581,7 @@ else:
     <widget type="led" version="2.0.0">
       <name>CONDITIONING ON/OFF LLRF3_1</name>
       <class>ON_OFF</class>
-      <pv_name>ELI:RF:$(conditioning):CONDITIONING_STATUS</pv_name>
+      <pv_name>$(conditioning):CONDITIONING_STATUS</pv_name>
       <x>218</x>
       <y>24</y>
       <width>51</width>
@@ -614,7 +614,7 @@ if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
     widget.setPropertyValue('off_label', "OFF")
 ]]></text>
-          <pv_name>ELI:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
+          <pv_name>$(conditioning):CONDITIONING_STATUS</pv_name>
         </script>
       </scripts>
     </widget>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-29 16:46:02 by beatr-->
+<!--Saved on 2026-02-17 12:07:45 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>550</width>
@@ -627,7 +627,7 @@ elif value>=1:	# 10 mW
     <widget type="led" version="2.0.0">
       <name>CONDITIONING ON/OFF LLRF3_1</name>
       <class>ON_OFF</class>
-      <pv_name>ELI:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
+      <pv_name>SSRIP:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
       <x>151</x>
       <y>24</y>
       <width>51</width>
@@ -660,7 +660,7 @@ if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
     widget.setPropertyValue('off_label', "OFF")
 ]]></text>
-          <pv_name>ELI:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
+          <pv_name>SSRIP:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
         </script>
       </scripts>
     </widget>
@@ -1289,7 +1289,7 @@ elif value>=0.85:
     <widget type="led" version="2.0.0">
       <name>CONDITIONING ON/OFF LLRF3_2</name>
       <class>ON_OFF</class>
-      <pv_name>ELI:RF:CONDITIONING02:CONDITIONING_STATUS</pv_name>
+      <pv_name>SSRIP:RF:CONDITIONING02:CONDITIONING_STATUS</pv_name>
       <x>151</x>
       <y>24</y>
       <width>51</width>
@@ -1322,7 +1322,7 @@ if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
     widget.setPropertyValue('off_label', "OFF")
 ]]></text>
-          <pv_name>SPARC:RF:CONDITIONING01:CONDITIONING_STATUS</pv_name>
+          <pv_name>SSRIP:RF:CONDITIONING02:CONDITIONING_STATUS</pv_name>
         </script>
       </scripts>
     </widget>
@@ -1836,7 +1836,7 @@ else:
     <widget type="led" version="2.0.0">
       <name>CONDITIONING ON/OFF LLRF3</name>
       <class>ON_OFF</class>
-      <pv_name>ELI:RF:CONDITIONING03:CONDITIONING_STATUS</pv_name>
+      <pv_name>SSRIP:RF:CONDITIONING03:CONDITIONING_STATUS</pv_name>
       <x>151</x>
       <y>24</y>
       <width>51</width>
@@ -1869,7 +1869,7 @@ if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
     widget.setPropertyValue('off_label', "OFF")
 ]]></text>
-          <pv_name>ELI:RF:CONDITIONING03:CONDITIONING_STATUS</pv_name>
+          <pv_name>SSRIP:RF:CONDITIONING03:CONDITIONING_STATUS</pv_name>
         </script>
       </scripts>
     </widget>
@@ -2502,7 +2502,7 @@ else:
     <widget type="led" version="2.0.0">
       <name>CONDITIONING ON/OFF LLRF4</name>
       <class>ON_OFF</class>
-      <pv_name>ELI:RF:CONDITIONING04:CONDITIONING_STATUS</pv_name>
+      <pv_name>SSRIP:RF:CONDITIONING04:CONDITIONING_STATUS</pv_name>
       <x>151</x>
       <y>24</y>
       <width>51</width>
@@ -2535,7 +2535,7 @@ if value == 0:
     widget.setPropertyValue('off_color', ColorFontUtil.GREEN)
     widget.setPropertyValue('off_label', "OFF")
 ]]></text>
-          <pv_name>ELI:RF:CONDITIONING04:CONDITIONING_STATUS</pv_name>
+          <pv_name>SSRIP:RF:CONDITIONING04:CONDITIONING_STATUS</pv_name>
         </script>
       </scripts>
     </widget>
