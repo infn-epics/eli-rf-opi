@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-13 13:40:12 by beatr-->
+<!--Saved on 2026-02-17 11:30:53 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>1535</width>
-  <height>898</height>
+  <height>1162</height>
   <widget type="group" version="3.0.0">
     <name>$(CONDITIONING_IOC)</name>
     <x>11</x>
@@ -78,6 +78,7 @@ for i, pv in enumerate(pvs[2:2+len(labels)]):
           <pv_name>$(PREF):$(PUMP11):$(SUFF)</pv_name>
           <pv_name>$(PREF):$(PUMP12):$(SUFF)</pv_name>
           <pv_name>$(PREF):$(PUMP13):$(SUFF)</pv_name>
+          <pv_name>$(PREF):$(PUMP14):$(SUFF)</pv_name>
         </script>
       </scripts>
       <editable>false</editable>
@@ -822,6 +823,7 @@ else:
         <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
         </font>
       </title_font>
+      <show_toolbar>false</show_toolbar>
       <show_legend>true</show_legend>
       <scripts>
         <script file="EmbeddedPy">

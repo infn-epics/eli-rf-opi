@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-11 16:06:17 by beatr-->
+<!--Saved on 2026-02-17 11:30:22 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -369,27 +369,27 @@ if value == 0:
         <file>conditioning_panel.bob</file>
         <macros>
           <CONDITIONING_IOC>SSRIP:RF:CONDITIONING01</CONDITIONING_IOC>
-          <LLRF_NAME>sparcdev1</LLRF_NAME>
-          <power_average_cond>power_average_cond:sparcdev1</power_average_cond>
-          <vacuum_table>vacuum_table:sparcdev1</vacuum_table>
+          <LLRF_NAME>LEL-RF-LLRF01</LLRF_NAME>
+          <power_average_cond>power_average_cond:LEL-RF-LLRF01</power_average_cond>
+          <vacuum_table>vacuum_table:LEL-RF-LLRF01</vacuum_table>
           <trigger_apply_table>trigger_apply_table01</trigger_apply_table>
-          <PUMP1>VAC:GUNVPC:GUNSIP01</PUMP1>
-          <PUMP2>VAC:GUNVPC:GUNSIP02</PUMP2>
-          <PUMP3>VAC:GUNVGC:GUNVGA01</PUMP3>
+          <PUMP1>VPCON01:IONP01</PUMP1>
+          <PUMP2>VPCON01:IONP02</PUMP2>
+          <PUMP3>VPCON01:IONP03</PUMP3>
           <power_MW_cond>power_MW_cond:01</power_MW_cond>
           <boolean_cond>boolean_cond:01</boolean_cond>
-          <PREF>SPARC</PREF>
+          <PREF>LEL:VAC</PREF>
           <SUFF>PRES_RB</SUFF>
-          <PUMP4>VAC:KLY12VPC:KLY1SIP1</PUMP4>
-          <PUMP5>VAC:KLY1VPC:W1DSIP01</PUMP5>
-          <PUMP6>VAC:KLY1VPC:W1GSIP01</PUMP6>
-          <PUMP7>VAC:KLY12VPC:W1KSIP01</PUMP7>
-          <PUMP8>VAC:KLY12VPC:W1KSIP02</PUMP8>
-          <PUMP9>VAC:KLY1VPC:W1KSIP03</PUMP9>
-          <PUMP10>VAC:GUNVPC:GUNSIP01</PUMP10>
-          <PUMP11>VAC:GUNVPC:GUNSIP01</PUMP11>
-          <PUMP12>VAC:GUNVPC:GUNSIP01</PUMP12>
-          <PUMP13>VAC:GUNVPC:GUNSIP01</PUMP13>
+          <PUMP4>VPCON01:IONP04</PUMP4>
+          <PUMP5>VGCON01:CC01</PUMP5>
+          <PUMP6>VGCON01:CC03</PUMP6>
+          <PUMP7>VGCON01:CC04</PUMP7>
+          <PUMP8>VPCON04:WGS01IONP01</PUMP8>
+          <PUMP9>VPCON04:WGS01IONP02</PUMP9>
+          <PUMP10>VPCON04:WGS01IONP03</PUMP10>
+          <PUMP11>VPCON04:WGS01IONP04</PUMP11>
+          <PUMP12>VPCON05:WGS01IONP05</PUMP12>
+          <PUMP13>VPCON05:WGS01IONP06</PUMP13>
           <selection1>Gun_Probe</selection1>
           <selection2>Driver_FDW</selection2>
           <selection3>Klystron1_FDW</selection3>
@@ -397,6 +397,7 @@ if value == 0:
           <selection5>Gun_FDW</selection5>
           <selection6>Gun_REV</selection6>
           <channel_sel>channel_sel:line1</channel_sel>
+          <PUMP14>VPCON05:WGS01IONP06</PUMP14>
         </macros>
         <target>window</target>
       </action>

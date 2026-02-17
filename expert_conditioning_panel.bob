@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-13 13:39:47 by beatr-->
+<!--Saved on 2026-02-17 10:12:12 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>840</width>
@@ -276,7 +276,7 @@ widget.setPropertyValue('y_axes[2].maximum', max)]]></text>
         </marker>
       </widget>
       <widget type="combo" version="2.0.0">
-        <name>ComboBox_1</name>
+        <name>$(LLRF_NAME)</name>
         <pv_name>loc://$(channel_sel)&lt;VString&gt;</pv_name>
         <x>473</x>
         <y>3</y>
@@ -314,16 +314,15 @@ elif channel_sel==item6: PVUtil.writePV(str(pvs[0]),5,1); mask_graph.setProperty
             <pv_name trigger="false">$(CONDITIONING_IOC):WF_SOURCE_SEL</pv_name>
             <pv_name>loc://$(channel_sel)</pv_name>
           </script>
-          <script file="EmbeddedPy">
-            <text><![CDATA[# Embedded python script
-from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+          <script file="EmbeddedPy" check_connections="false">
+            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
 
 sel=PVUtil.getStringArray(pvs[0])
 a=int(PVUtil.getDouble(pvs[1]))
+llrf_name=widget.getName()
 
 mask_graph = ScriptUtil.findWidgetByName(widget, 'mask_plot')
-mask_graph.setPropertyValue('traces[0].y_pv',sel[a])
-print(sel[a])
+mask_graph.setPropertyValue('traces[0].y_pv',llrf_name+sel[a])
 ]]></text>
             <pv_name trigger="false">$(CONDITIONING_IOC):WF_SOURCE_SUFFIX</pv_name>
             <pv_name>$(CONDITIONING_IOC):WF_SOURCE_SEL</pv_name>
