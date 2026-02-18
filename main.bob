@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-17 20:30:37 by beatr-->
+<!--Saved on 2026-02-18 10:42:47 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -796,23 +796,23 @@ if value == 0:
           <power_average_cond>power_average_cond:LEL-RF-LLRF02</power_average_cond>
           <vacuum_table>vacuum_table:LEL-RF-LLRF02</vacuum_table>
           <trigger_apply_table>trigger_apply_table02</trigger_apply_table>
-          <PUMP1>VAC:KLY12VPC:W2KSIP01</PUMP1>
-          <PUMP2>VAC:KLY12VPC:W2KSIP02</PUMP2>
-          <PUMP3>VAC:KLY2VPC:W2KSIP03</PUMP3>
-          <PUMP4>VAC:KLY2VPC:W2KSIP04</PUMP4>
-          <PUMP5>VAC:KLY2VPC:W2BSIP01</PUMP5>
-          <PUMP6>VAC:KLY2VPC:W2ASIP01</PUMP6>
-          <PUMP7>VAC:GACVPC:AC2SIP01</PUMP7>
-          <PUMP8>VAC:GACVPC:AC1SIP01</PUMP8>
-          <PUMP9>VAC:GACVPC:AC1SIP02</PUMP9>
-          <PUMP10>VAC:GACVPC:AC2SIP01</PUMP10>
-          <PUMP11>VAC:GACVPC:AC2SIP01</PUMP11>
-          <PUMP12>VAC:GACVPC:AC2SIP01</PUMP12>
+          <PUMP1>VPCON02:IONP05</PUMP1>
+          <PUMP2>VPCON02:IONP06</PUMP2>
+          <PUMP3>VPCON05:WGS02IONP01</PUMP3>
+          <PUMP4>VPCON05:WGS02IONP02</PUMP4>
+          <PUMP5>VPCON06:WGS02IONP03</PUMP5>
+          <PUMP6>VPCON06:WGS02IONP04</PUMP6>
+          <PUMP7>VPCON06:WGS02IONP05</PUMP7>
+          <PUMP8>VPCON06:WGS02IONP03</PUMP8>
+          <PUMP9>VPCON06:WGS02IONP03</PUMP9>
+          <PUMP10>VPCON06:WGS02IONP03</PUMP10>
+          <PUMP11>VPCON06:WGS02IONP03</PUMP11>
+          <PUMP12>VPCON06:WGS02IONP03</PUMP12>
           <power_MW_cond>power_MW_cond:02</power_MW_cond>
           <boolean_cond>boolean_cond:02</boolean_cond>
-          <PREF>ELI</PREF>
+          <PREF>LEL:VAC</PREF>
           <SUFF>PRES_RB</SUFF>
-          <PUMP13>VAC:GACVPC:AC2SIP01</PUMP13>
+          <PUMP13>VPCON06:WGS02IONP03</PUMP13>
         </macros>
         <target>window</target>
       </action>
