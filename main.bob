@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-18 10:42:47 by beatr-->
+<!--Saved on 2026-02-18 12:38:36 by root-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -791,7 +791,7 @@ if value == 0:
         <description>Open Display</description>
         <file>conditioning_panel.bob</file>
         <macros>
-          <CONDITIONING_IOC>ELI:RF:CONDITIONING02</CONDITIONING_IOC>
+          <CONDITIONING_IOC>SSRIP:RF:CONDITIONING02</CONDITIONING_IOC>
           <LLRF_NAME>LEL-RF-LLRF02</LLRF_NAME>
           <power_average_cond>power_average_cond:LEL-RF-LLRF02</power_average_cond>
           <vacuum_table>vacuum_table:LEL-RF-LLRF02</vacuum_table>
@@ -813,6 +813,7 @@ if value == 0:
           <PREF>LEL:VAC</PREF>
           <SUFF>PRES_RB</SUFF>
           <PUMP13>VPCON06:WGS02IONP03</PUMP13>
+          <PUMP14>VPCON06:WGS02IONP03</PUMP14>
         </macros>
         <target>window</target>
       </action>
