@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-19 12:53:49 by root-->
+<!--Saved on 2026-02-19 13:08:04 by root-->
 <display version="2.0.0">
   <name>Display</name>
-  <width>901</width>
+  <width>760</width>
   <height>907</height>
   <widget type="label" version="2.0.0">
     <name>Title</name>
