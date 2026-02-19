@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-18 12:38:36 by root-->
+<!--Saved on 2026-02-18 18:54:39 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -814,6 +814,13 @@ if value == 0:
           <SUFF>PRES_RB</SUFF>
           <PUMP13>VPCON06:WGS02IONP03</PUMP13>
           <PUMP14>VPCON06:WGS02IONP03</PUMP14>
+          <selection1>AC1_OUT</selection1>
+          <selection2>Driver_FDW</selection2>
+          <selection3>Klystron_FDW</selection3>
+          <selection4>Klystron_REV</selection4>
+          <selection5>AC1_IN_FDW</selection5>
+          <selection6>AC1_IN_REV</selection6>
+          <channel_sel>channel_sel:line2</channel_sel>
         </macros>
         <target>window</target>
       </action>
