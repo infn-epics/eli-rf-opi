@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-18 18:54:39 by beatr-->
+<!--Saved on 2026-02-19 23:05:11 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -1217,28 +1217,36 @@ if value == 0:
         <description>Open Display</description>
         <file>conditioning_panel.bob</file>
         <macros>
-          <CONDITIONING_IOC>ELI:RF:CONDITIONING03</CONDITIONING_IOC>
+          <CONDITIONING_IOC>SSRIP:RF:CONDITIONING03</CONDITIONING_IOC>
           <LLRF_NAME>LEL-RF-LLRF03</LLRF_NAME>
-          <power_average_cond>power_average_cond:LEL-RF-LLRF03</power_average_cond>
           <vacuum_table>vacuum_table:LEL-RF-LLRF03</vacuum_table>
           <trigger_apply_table>trigger_apply_table03</trigger_apply_table>
-          <PUMP1>VAC:KLCTVPC:KLCSIP01</PUMP1>
-          <PUMP2>VAC:KLCTVPC:BOCSIP01</PUMP2>
-          <PUMP3>VAC:KLYCVPC:WCSIP01</PUMP3>
-          <PUMP4>VAC:KLYCVPC:WCSIP02</PUMP4>
-          <PUMP5>VAC:KLYCVPC:WCSIP03</PUMP5>
-          <PUMP6>VAC:KLYC2VPC:WCSIP04</PUMP6>
-          <PUMP7>VAC:KLYC2VPC:WCSIP05</PUMP7>
-          <PUMP8>VAC:KLYC2VPC:WCSIP06</PUMP8>
-          <PUMP9>VAC:AC3VPC:AC3SIP01</PUMP9>
-          <PUMP10>VAC:AC3VPC:AC3SIP02</PUMP10>
-          <PUMP11>VAC:AC3VPC:AC3SIP03</PUMP11>
-          <PUMP12>VAC:AC3VPC:AC3SIP04</PUMP12>
+          <PUMP1>VGCON01:CC06</PUMP1>
+          <PUMP2>VPCON03:IONP09</PUMP2>
+          <PUMP3>VPCON02:IONP07</PUMP3>
+          <PUMP4>VPCON02:IONP08</PUMP4>
+          <PUMP5>VPCON06:WGS03IONP01</PUMP5>
+          <PUMP6>VPCON07:WGS03IONP02</PUMP6>
+          <PUMP7>VPCON07:WGS03IONP03</PUMP7>
+          <PUMP8>VPCON07:WGS03IONP04</PUMP8>
+          <PUMP9>VPCON07:WGS03IONP04</PUMP9>
+          <PUMP10>VPCON07:WGS03IONP04</PUMP10>
+          <PUMP11>VPCON07:WGS03IONP04</PUMP11>
+          <PUMP12>VPCON07:WGS03IONP04</PUMP12>
           <power_MW_cond>power_MW_cond:03</power_MW_cond>
           <boolean_cond>boolean_cond:03</boolean_cond>
-          <PREF>ELI</PREF>
+          <PREF>LEL:VAC</PREF>
           <SUFF>PRES_RB</SUFF>
-          <PUMP13>VAC:AC3VPC:AC3SIP04</PUMP13>
+          <PUMP13>VPCON07:WGS03IONP04</PUMP13>
+          <PUMP14>VPCON07:WGS03IONP04</PUMP14>
+          <selection1>Driver_FDW</selection1>
+          <selection2>Klystron_FDW</selection2>
+          <selection3>Klystron_REV</selection3>
+          <selection4>AC2_IN_FDW</selection4>
+          <selection5>AC2_IN_REV</selection5>
+          <selection6>AC2_OUT</selection6>
+          <channel_sel>channel_sel:line3</channel_sel>
+          <power_average_cond>power_average_cond:LEL-RF-LLRF03</power_average_cond>
         </macros>
         <target>window</target>
       </action>
