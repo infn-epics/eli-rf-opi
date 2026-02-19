@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-18 10:31:31 by root-->
+<!--Saved on 2026-02-19 12:53:49 by root-->
 <display version="2.0.0">
   <name>Display</name>
   <width>901</width>
@@ -120,34 +120,6 @@ if len(data) > 0:
               </font>
             </widget>
           </widget>
-          <widget type="action_button" version="3.0.0">
-            <name>Action Button_1_2</name>
-            <x>598</x>
-            <y>22</y>
-            <visible>false</visible>
-            <scripts>
-              <script file="EmbeddedPy">
-                <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
-
-
-
-durata = PVUtil.getDouble(pvs[0])
-
-offset = PVUtil.getDouble(pvs[1])
-
-
-
-PVUtil.writePV(pvs[2].getName(), durata, 1)
-
-PVUtil.writePV(pvs[3].getName(), offset, 1)]]></text>
-                <pv_name>$(LLRF_NAME):$(MARKER_DUR2)</pv_name>
-                <pv_name>$(LLRF_NAME):$(MARKER_OFS2)</pv_name>
-                <pv_name>$(LLRF_NAME):$(INTLK2):duration</pv_name>
-                <pv_name>$(LLRF_NAME):$(INTLK2):offset</pv_name>
-              </script>
-            </scripts>
-            <tooltip>$(actions)</tooltip>
-          </widget>
           <widget type="group" version="3.0.0">
             <name>Interlock_ch2</name>
             <x>20</x>
@@ -166,6 +138,7 @@ PVUtil.writePV(pvs[3].getName(), offset, 1)]]></text>
               <pv_name>$(LLRF_NAME):$(INTLK2):level</pv_name>
               <x>227</x>
               <y>23</y>
+              <width>80</width>
               <height>25</height>
               <format>1</format>
               <precision>4</precision>
@@ -173,14 +146,15 @@ PVUtil.writePV(pvs[3].getName(), offset, 1)]]></text>
             <widget type="label" version="2.0.0">
               <name>Duration_1</name>
               <text>Duration [us]</text>
-              <x>341</x>
+              <x>326</x>
               <y>1</y>
             </widget>
             <widget type="textentry" version="3.0.0">
               <name>Duration_1</name>
               <pv_name>$(LLRF_NAME):$(MARKER_DUR2)</pv_name>
-              <x>342</x>
+              <x>326</x>
               <y>23</y>
+              <width>80</width>
               <height>25</height>
               <format>1</format>
               <precision>4</precision>
@@ -188,14 +162,15 @@ PVUtil.writePV(pvs[3].getName(), offset, 1)]]></text>
             <widget type="label" version="2.0.0">
               <name>Offset_1</name>
               <text>Offset [us]</text>
-              <x>456</x>
+              <x>428</x>
               <y>1</y>
             </widget>
             <widget type="textentry" version="3.0.0">
               <name>Offset_1</name>
               <pv_name>$(LLRF_NAME):$(MARKER_OFS2)</pv_name>
-              <x>457</x>
+              <x>428</x>
               <y>23</y>
+              <width>80</width>
               <height>25</height>
               <format>1</format>
               <precision>4</precision>
@@ -271,6 +246,46 @@ else:
               <label></label>
               <x>167</x>
               <y>21</y>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>SET_2</name>
+              <pv_name>loc://$(boolean2)(0)</pv_name>
+              <x>520</x>
+              <y>23</y>
+              <width>45</width>
+              <height>23</height>
+              <off_label>SET</off_label>
+              <off_color>
+                <color name="Button_Background" red="210" green="210" blue="210">
+                </color>
+              </off_color>
+              <on_label>OK</on_label>
+              <show_led>false</show_led>
+              <actions>
+              </actions>
+              <scripts>
+                <script file="EmbeddedPy">
+                  <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+
+boolean_value = int(PVUtil.getDouble(pvs[4]))
+if boolean_value==0: pass
+else:
+
+    ofs = PVUtil.getDouble(pvs[0])
+    dur = PVUtil.getDouble(pvs[1])
+
+    PVUtil.writePV(str(pvs[2]), ofs,1)
+    PVUtil.writePV(str(pvs[3]), dur,1)]]></text>
+                  <pv_name trigger="false">$(LLRF_NAME):$(MARKER_OFS2)</pv_name>
+                  <pv_name trigger="false">$(LLRF_NAME):$(MARKER_DUR2)</pv_name>
+                  <pv_name trigger="false">$(LLRF_NAME):$(INTLK2):offset</pv_name>
+                  <pv_name trigger="false">$(LLRF_NAME):$(INTLK2):duration</pv_name>
+                  <pv_name>loc://$(boolean2)</pv_name>
+                </script>
+              </scripts>
+              <tooltip>$(actions)</tooltip>
+              <mode>1</mode>
+              <confirm_message>Gate interlock applied!</confirm_message>
             </widget>
           </widget>
           <widget type="group" version="3.0.0">
@@ -592,6 +607,22 @@ PVUtil.writePV(str(pvs[4]), rapporto,1)
                   <pv_name>='$(LLRF_NAME):$(MARKER_OFS2)'+'$(LLRF_NAME):$(MARKER_DUR2)'</pv_name>
                   <interactive>true</interactive>
                 </marker>
+                <marker>
+                  <color>
+                    <color name="OK" red="0" green="255" blue="0">
+                    </color>
+                  </color>
+                  <pv_name>$(LLRF_NAME):$(INTLK2):offset</pv_name>
+                  <interactive>true</interactive>
+                </marker>
+                <marker>
+                  <color>
+                    <color name="OK" red="0" green="255" blue="0">
+                    </color>
+                  </color>
+                  <pv_name>='$(LLRF_NAME):$(INTLK2):offset'+'$(LLRF_NAME):$(INTLK2):duration'</pv_name>
+                  <interactive>true</interactive>
+                </marker>
               </marker>
             </widget>
             <widget type="action_button" version="3.0.0">
@@ -736,34 +767,6 @@ if len(data) > 0:
               </font>
             </widget>
           </widget>
-          <widget type="action_button" version="3.0.0">
-            <name>Action Button_2_1</name>
-            <x>598</x>
-            <y>22</y>
-            <visible>false</visible>
-            <scripts>
-              <script file="EmbeddedPy">
-                <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
-
-
-
-durata = PVUtil.getDouble(pvs[0])
-
-offset = PVUtil.getDouble(pvs[1])
-
-
-
-PVUtil.writePV(pvs[2].getName(), durata, 1)
-
-PVUtil.writePV(pvs[3].getName(), offset, 1)]]></text>
-                <pv_name>$(LLRF_NAME):$(MARKER_DUR4)</pv_name>
-                <pv_name>$(LLRF_NAME):$(MARKER_OFS4)</pv_name>
-                <pv_name>$(LLRF_NAME):$(INTLK4):duration</pv_name>
-                <pv_name>$(LLRF_NAME):$(INTLK4):offset</pv_name>
-              </script>
-            </scripts>
-            <tooltip>$(actions)</tooltip>
-          </widget>
           <widget type="group" version="3.0.0">
             <name>Interlock_ch4</name>
             <x>20</x>
@@ -826,13 +829,13 @@ else:
             <widget type="label" version="2.0.0">
               <name>Duration_2</name>
               <text>Duration [us]</text>
-              <x>341</x>
+              <x>326</x>
               <y>1</y>
             </widget>
             <widget type="label" version="2.0.0">
               <name>Offset_2</name>
               <text>Offset [us]</text>
-              <x>456</x>
+              <x>428</x>
               <y>1</y>
             </widget>
             <widget type="led" version="2.0.0">
@@ -866,6 +869,7 @@ else:
               <pv_name>$(LLRF_NAME):$(INTLK4):level</pv_name>
               <x>227</x>
               <y>23</y>
+              <width>80</width>
               <height>25</height>
               <format>1</format>
               <precision>4</precision>
@@ -873,8 +877,9 @@ else:
             <widget type="textentry" version="3.0.0">
               <name>Duration_2</name>
               <pv_name>$(LLRF_NAME):$(MARKER_DUR4)</pv_name>
-              <x>342</x>
+              <x>326</x>
               <y>23</y>
+              <width>80</width>
               <height>25</height>
               <format>1</format>
               <precision>4</precision>
@@ -882,11 +887,52 @@ else:
             <widget type="textentry" version="3.0.0">
               <name>Offset_2</name>
               <pv_name>$(LLRF_NAME):$(MARKER_OFS4)</pv_name>
-              <x>457</x>
+              <x>428</x>
               <y>23</y>
+              <width>80</width>
               <height>25</height>
               <format>1</format>
               <precision>4</precision>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>SET_4</name>
+              <pv_name>loc://$(boolean4)(0)</pv_name>
+              <x>520</x>
+              <y>23</y>
+              <width>45</width>
+              <height>23</height>
+              <off_label>SET</off_label>
+              <off_color>
+                <color name="Button_Background" red="210" green="210" blue="210">
+                </color>
+              </off_color>
+              <on_label>OK</on_label>
+              <show_led>false</show_led>
+              <actions>
+              </actions>
+              <scripts>
+                <script file="EmbeddedPy">
+                  <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+
+boolean_value = int(PVUtil.getDouble(pvs[4]))
+if boolean_value==0: pass
+else:
+
+    ofs = PVUtil.getDouble(pvs[0])
+    dur = PVUtil.getDouble(pvs[1])
+
+    PVUtil.writePV(str(pvs[2]), ofs,1)
+    PVUtil.writePV(str(pvs[3]), dur,1)]]></text>
+                  <pv_name trigger="false">$(LLRF_NAME):$(MARKER_OFS4)</pv_name>
+                  <pv_name trigger="false">$(LLRF_NAME):$(MARKER_DUR4)</pv_name>
+                  <pv_name trigger="false">$(LLRF_NAME):$(INTLK4):offset</pv_name>
+                  <pv_name trigger="false">$(LLRF_NAME):$(INTLK4):duration</pv_name>
+                  <pv_name>loc://$(boolean4)</pv_name>
+                </script>
+              </scripts>
+              <tooltip>$(actions)</tooltip>
+              <mode>1</mode>
+              <confirm_message>Gate interlock applied!</confirm_message>
             </widget>
           </widget>
           <widget type="group" version="3.0.0">
@@ -1208,6 +1254,22 @@ PVUtil.writePV(str(pvs[4]), rapporto,1)
                   <pv_name>='$(LLRF_NAME):$(MARKER_OFS4)'+'$(LLRF_NAME):$(MARKER_DUR4)'</pv_name>
                   <interactive>true</interactive>
                 </marker>
+                <marker>
+                  <color>
+                    <color name="OK" red="0" green="255" blue="0">
+                    </color>
+                  </color>
+                  <pv_name>$(LLRF_NAME):$(INTLK4):offset</pv_name>
+                  <interactive>true</interactive>
+                </marker>
+                <marker>
+                  <color>
+                    <color name="OK" red="0" green="255" blue="0">
+                    </color>
+                  </color>
+                  <pv_name>='$(LLRF_NAME):$(INTLK4):offset'+'$(LLRF_NAME):$(INTLK4):duration'</pv_name>
+                  <interactive>true</interactive>
+                </marker>
               </marker>
             </widget>
             <widget type="textentry" version="3.0.0">
@@ -1370,6 +1432,7 @@ if len(data) > 0:
               <pv_name>$(LLRF_NAME):$(INTLK6):level</pv_name>
               <x>227</x>
               <y>23</y>
+              <width>80</width>
               <height>25</height>
               <format>1</format>
               <precision>4</precision>
@@ -1377,14 +1440,15 @@ if len(data) > 0:
             <widget type="label" version="2.0.0">
               <name>Duration_3</name>
               <text>Duration [us]</text>
-              <x>341</x>
+              <x>326</x>
               <y>1</y>
             </widget>
             <widget type="textentry" version="3.0.0">
               <name>Duration_3</name>
               <pv_name>$(LLRF_NAME):$(MARKER_DUR6)</pv_name>
-              <x>342</x>
+              <x>326</x>
               <y>23</y>
+              <width>80</width>
               <height>25</height>
               <format>1</format>
               <precision>4</precision>
@@ -1392,14 +1456,15 @@ if len(data) > 0:
             <widget type="label" version="2.0.0">
               <name>Offset_3</name>
               <text>Offset [us]</text>
-              <x>456</x>
+              <x>428</x>
               <y>1</y>
             </widget>
             <widget type="textentry" version="3.0.0">
               <name>Offset_3</name>
               <pv_name>$(LLRF_NAME):$(MARKER_OFS6)</pv_name>
-              <x>457</x>
+              <x>428</x>
               <y>23</y>
+              <width>80</width>
               <height>25</height>
               <format>1</format>
               <precision>4</precision>
@@ -1475,6 +1540,46 @@ else:
               </scripts>
               <tooltip>$(actions)</tooltip>
               <show_confirm_dialog>false</show_confirm_dialog>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>SET_5</name>
+              <pv_name>loc://$(boolean6)(0)</pv_name>
+              <x>520</x>
+              <y>23</y>
+              <width>45</width>
+              <height>23</height>
+              <off_label>SET</off_label>
+              <off_color>
+                <color name="Button_Background" red="210" green="210" blue="210">
+                </color>
+              </off_color>
+              <on_label>OK</on_label>
+              <show_led>false</show_led>
+              <actions>
+              </actions>
+              <scripts>
+                <script file="EmbeddedPy">
+                  <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+
+boolean_value = int(PVUtil.getDouble(pvs[4]))
+if boolean_value==0: pass
+else:
+
+    ofs = PVUtil.getDouble(pvs[0])
+    dur = PVUtil.getDouble(pvs[1])
+
+    PVUtil.writePV(str(pvs[2]), ofs,1)
+    PVUtil.writePV(str(pvs[3]), dur,1)]]></text>
+                  <pv_name trigger="false">$(LLRF_NAME):$(MARKER_OFS6)</pv_name>
+                  <pv_name trigger="false">$(LLRF_NAME):$(MARKER_DUR6)</pv_name>
+                  <pv_name trigger="false">$(LLRF_NAME):$(INTLK6):offset</pv_name>
+                  <pv_name trigger="false">$(LLRF_NAME):$(INTLK6):duration</pv_name>
+                  <pv_name>loc://$(boolean6)</pv_name>
+                </script>
+              </scripts>
+              <tooltip>$(actions)</tooltip>
+              <mode>1</mode>
+              <confirm_message>Gate interlock applied!</confirm_message>
             </widget>
           </widget>
           <widget type="group" version="3.0.0">
@@ -1796,6 +1901,22 @@ PVUtil.writePV(str(pvs[4]), rapporto,1)
                   <pv_name>='$(LLRF_NAME):$(MARKER_OFS6)'+'$(LLRF_NAME):$(MARKER_DUR6)'</pv_name>
                   <interactive>true</interactive>
                 </marker>
+                <marker>
+                  <color>
+                    <color name="OK" red="0" green="255" blue="0">
+                    </color>
+                  </color>
+                  <pv_name>$(LLRF_NAME):$(INTLK6):offset</pv_name>
+                  <interactive>true</interactive>
+                </marker>
+                <marker>
+                  <color>
+                    <color name="OK" red="0" green="255" blue="0">
+                    </color>
+                  </color>
+                  <pv_name>='$(LLRF_NAME):$(INTLK6):offset'+'$(LLRF_NAME):$(INTLK6):duration'</pv_name>
+                  <interactive>true</interactive>
+                </marker>
               </marker>
             </widget>
             <widget type="textentry" version="3.0.0">
@@ -1844,40 +1965,6 @@ PVUtil.writePV(str(pvs[4]), rapporto,1)
     <y>66</y>
     <width>680</width>
     <height>804</height>
-  </widget>
-  <widget type="progressbar" version="2.0.0">
-    <name>Progress Bar</name>
-    <x>860</x>
-    <y>410</y>
-    <width>1</width>
-    <height>1</height>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button3_1</name>
-    <x>640</x>
-    <y>150</y>
-    <visible>false</visible>
-    <scripts>
-      <script file="EmbeddedPy">
-        <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
-
-
-
-durata = PVUtil.getDouble(pvs[0])
-
-offset = PVUtil.getDouble(pvs[1])
-
-
-
-PVUtil.writePV(pvs[2].getName(), durata, 1)
-
-PVUtil.writePV(pvs[3].getName(), offset, 1)]]></text>
-        <pv_name>$(LLRF_NAME):$(MARKER_DUR6)</pv_name>
-        <pv_name>$(LLRF_NAME):$(MARKER_OFS6)</pv_name>
-        <pv_name>$(LLRF_NAME):$(INTLK6):duration</pv_name>
-        <pv_name>$(LLRF_NAME):$(INTLK6):offset</pv_name>
-      </script>
-    </scripts>
-    <tooltip>$(actions)</tooltip>
+    <active_tab>2</active_tab>
   </widget>
 </display>
