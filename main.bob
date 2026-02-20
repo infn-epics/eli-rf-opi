@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-19 23:05:11 by beatr-->
+<!--Saved on 2026-02-20 14:14:43 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -815,10 +815,10 @@ if value == 0:
           <PUMP13>VPCON06:WGS02IONP03</PUMP13>
           <PUMP14>VPCON06:WGS02IONP03</PUMP14>
           <selection1>AC1_OUT</selection1>
-          <selection2>Driver_FDW</selection2>
-          <selection3>Klystron_FDW</selection3>
+          <selection2>Driver_FWD</selection2>
+          <selection3>Klystron_FWD</selection3>
           <selection4>Klystron_REV</selection4>
-          <selection5>AC1_IN_FDW</selection5>
+          <selection5>AC1_IN_FWD</selection5>
           <selection6>AC1_IN_REV</selection6>
           <channel_sel>channel_sel:line2</channel_sel>
         </macros>
@@ -1239,12 +1239,12 @@ if value == 0:
           <SUFF>PRES_RB</SUFF>
           <PUMP13>VPCON07:WGS03IONP04</PUMP13>
           <PUMP14>VPCON07:WGS03IONP04</PUMP14>
-          <selection1>Driver_FDW</selection1>
-          <selection2>Klystron_FDW</selection2>
-          <selection3>Klystron_REV</selection3>
-          <selection4>AC2_IN_FDW</selection4>
-          <selection5>AC2_IN_REV</selection5>
-          <selection6>AC2_OUT</selection6>
+          <selection1>AC2_OUT</selection1>
+          <selection2>Drive_FWD</selection2>
+          <selection3>Klystron_FWD</selection3>
+          <selection4>Klystron_REV</selection4>
+          <selection5>AC2_IN_FWD</selection5>
+          <selection6>AC2_IN_REV</selection6>
           <channel_sel>channel_sel:line3</channel_sel>
           <power_average_cond>power_average_cond:LEL-RF-LLRF03</power_average_cond>
         </macros>
