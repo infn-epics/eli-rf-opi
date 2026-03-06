@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-20 13:09:36 by beatr-->
+<!--Saved on 2026-03-06 11:33:17 by root-->
 <display version="2.0.0">
   <name>Display</name>
   <width>1535</width>
   <height>1162</height>
   <widget type="group" version="3.0.0">
     <name>$(CONDITIONING_IOC)</name>
-    <x>11</x>
-    <y>2</y>
+    <x>10</x>
     <width>585</width>
     <height>858</height>
     <font>
@@ -564,7 +563,7 @@ else:
         <pv_name>$(LLRF_NAME):vm:dsp:pi_amp:loop_closed</pv_name>
         <x>300</x>
         <y>18</y>
-        <width>110</width>
+        <width>111</width>
         <off_label>AMP FBK</off_label>
         <on_label>AMP FBK</on_label>
         <font>
@@ -625,15 +624,15 @@ else:
       <widget type="bool_button" version="2.0.0">
         <name>Action Button</name>
         <pv_name>$(LLRF_NAME):app:interlock:state</pv_name>
-        <x>421</x>
+        <x>422</x>
         <y>18</y>
-        <width>110</width>
-        <off_label>Clear</off_label>
+        <width>40</width>
+        <off_label>CLR</off_label>
         <off_color>
           <color name="Button_Background" red="210" green="210" blue="210">
           </color>
         </off_color>
-        <on_label>Clear</on_label>
+        <on_label>CLR</on_label>
         <on_color>
           <color name="Button_Background" red="210" green="210" blue="210">
           </color>
@@ -710,6 +709,19 @@ else:
           </color>
         </off_color>
         <on_label>Waveform Intlk On</on_label>
+        <font>
+          <font family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+      </widget>
+      <widget type="checkbox" version="2.0.0">
+        <name>Slide Button_1</name>
+        <pv_name>$(LLRF_NAME):$(INTLK4):enabled</pv_name>
+        <label>VSWR</label>
+        <x>470</x>
+        <y>18</y>
+        <width>70</width>
+        <height>30</height>
         <font>
           <font family="Liberation Sans" style="BOLD" size="14.0">
           </font>

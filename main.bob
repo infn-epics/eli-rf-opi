@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-20 14:14:43 by beatr-->
+<!--Saved on 2026-03-06 11:36:24 by root-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -397,6 +397,7 @@ if value == 0:
           <selection6>Gun_REV</selection6>
           <channel_sel>channel_sel:line1</channel_sel>
           <PUMP14>VPCON05:WGS01IONP06</PUMP14>
+          <INTLK4>ad1:interlock:ch4</INTLK4>
         </macros>
         <target>window</target>
       </action>
@@ -821,6 +822,7 @@ if value == 0:
           <selection5>AC1_IN_FWD</selection5>
           <selection6>AC1_IN_REV</selection6>
           <channel_sel>channel_sel:line2</channel_sel>
+          <INTLK4>ad1:interlock:ch4</INTLK4>
         </macros>
         <target>window</target>
       </action>
@@ -1247,6 +1249,7 @@ if value == 0:
           <selection6>AC2_IN_REV</selection6>
           <channel_sel>channel_sel:line3</channel_sel>
           <power_average_cond>power_average_cond:LEL-RF-LLRF03</power_average_cond>
+          <INTLK4>ad1:interlock:ch4</INTLK4>
         </macros>
         <target>window</target>
       </action>
@@ -1625,6 +1628,7 @@ if value=="Off":
           <PREF>ELI</PREF>
           <SUFF>PRES_RB</SUFF>
           <PUMP13>VAC:AC3VPC:AC3SIP04</PUMP13>
+          <INTLK4>ad1:interlock:ch4</INTLK4>
         </macros>
         <target>window</target>
       </action>
