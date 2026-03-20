@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-17 12:07:45 by beatr-->
+<!--Saved on 2026-03-20 13:18:09 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>550</width>
@@ -123,7 +123,7 @@ else:
     <widget type="led" version="2.0.0">
       <name>INTERLOCK_1</name>
       <class>GOOD_BAD</class>
-      <pv_name>LEL-RF-LLRF01:ad1:interlock:ch6:source</pv_name>
+      <pv_name>LEL-RF-LLRF01:ad1:interlock:ch4:source</pv_name>
       <bit>0</bit>
       <x>498</x>
       <off_color use_class="true">
@@ -1923,7 +1923,7 @@ if value == 0:
     <widget type="led" version="2.0.0">
       <name>INTERLOCK_7</name>
       <class>GOOD_BAD</class>
-      <pv_name>LEL-RF-LLRF03:ad1:interlock:ch6:source</pv_name>
+      <pv_name>LEL-RF-LLRF03:ad1:interlock:ch4:source</pv_name>
       <bit>0</bit>
       <x>498</x>
       <off_color use_class="true">
@@ -2589,7 +2589,7 @@ if value == 0:
     <widget type="led" version="2.0.0">
       <name>INTERLOCK_9</name>
       <class>GOOD_BAD</class>
-      <pv_name>LEL-RF-LLRF04:ad1:interlock:ch6:source</pv_name>
+      <pv_name>LEL-RF-LLRF04:ad1:interlock:ch4:source</pv_name>
       <bit>0</bit>
       <x>498</x>
       <off_color use_class="true">
