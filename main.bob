@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-03-13 12:00:37 by beatr-->
+<!--Saved on 2026-03-20 09:12:18 by beatr-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -1623,8 +1623,8 @@ if value=="Off":
           <PUMP10>VPCON08:WGC01IONP04</PUMP10>
           <PUMP11>VPCON08:WGC01IONP05</PUMP11>
           <PUMP12>VPCON08:WGC01IONP02</PUMP12>
-          <power_MW_cond>power_MW_cond:03</power_MW_cond>
-          <boolean_cond>boolean_cond:03</boolean_cond>
+          <power_MW_cond>power_MW_cond:04</power_MW_cond>
+          <boolean_cond>boolean_cond:04</boolean_cond>
           <PREF>LEL:VAC</PREF>
           <SUFF>PRES_RB</SUFF>
           <PUMP13>VPCON08:WGC01IONP02</PUMP13>
