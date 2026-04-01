@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-03-20 14:32:57 by beatr-->
+<!--Saved on 2026-04-01 15:47:14 by root-->
 <display version="2.0.0">
   <name>Display</name>
   <width>2404</width>
@@ -4330,8 +4330,8 @@ widget.setPropertyValue("text", text)]]></text>
           <file>RF_channel.bob</file>
           <macros>
             <LLRF_NAME>LEL-RF-LLRF03</LLRF_NAME>
-            <SIGNAL>ad1:ch5</SIGNAL>
-            <MARKERS>ad1:signals:ch5</MARKERS>
+            <SIGNAL>ad1:ch6</SIGNAL>
+            <MARKERS>ad1:signals:ch6</MARKERS>
             <SIGNAL_NAME>AC2 IN REVERSE</SIGNAL_NAME>
             <counts>counts:AC2INREV</counts>
             <power_MW>power_MW:AC2NREV</power_MW>
