@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-20 13:09:36 by beatr-->
+<!--Saved on 2026-03-20 09:50:58 by root-->
 <display version="2.0.0">
   <name>Display</name>
   <width>1535</width>
   <height>1162</height>
   <widget type="group" version="3.0.0">
     <name>$(CONDITIONING_IOC)</name>
-    <x>11</x>
-    <y>2</y>
+    <x>10</x>
     <width>585</width>
-    <height>858</height>
+    <height>890</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="14.0">
       </font>
@@ -17,7 +16,7 @@
     <transparent>true</transparent>
     <widget type="table" version="2.0.0">
       <name>Vacuum_table_meas</name>
-      <y>292</y>
+      <y>330</y>
       <width>551</width>
       <height>318</height>
       <columns>
@@ -564,7 +563,7 @@ else:
         <pv_name>$(LLRF_NAME):vm:dsp:pi_amp:loop_closed</pv_name>
         <x>300</x>
         <y>18</y>
-        <width>110</width>
+        <width>111</width>
         <off_label>AMP FBK</off_label>
         <on_label>AMP FBK</on_label>
         <font>
@@ -625,15 +624,15 @@ else:
       <widget type="bool_button" version="2.0.0">
         <name>Action Button</name>
         <pv_name>$(LLRF_NAME):app:interlock:state</pv_name>
-        <x>421</x>
+        <x>422</x>
         <y>18</y>
-        <width>110</width>
-        <off_label>Clear</off_label>
+        <width>40</width>
+        <off_label>CLR</off_label>
         <off_color>
           <color name="Button_Background" red="210" green="210" blue="210">
           </color>
         </off_color>
-        <on_label>Clear</on_label>
+        <on_label>CLR</on_label>
         <on_color>
           <color name="Button_Background" red="210" green="210" blue="210">
           </color>
@@ -715,11 +714,24 @@ else:
           </font>
         </font>
       </widget>
+      <widget type="checkbox" version="2.0.0">
+        <name>Slide Button_1</name>
+        <pv_name>$(LLRF_NAME):$(INTLK4):enabled</pv_name>
+        <label>VSWR</label>
+        <x>470</x>
+        <y>18</y>
+        <width>70</width>
+        <height>30</height>
+        <font>
+          <font family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+      </widget>
     </widget>
     <widget type="xyplot" version="3.0.0">
       <name>X/Y Plot</name>
       <x>1</x>
-      <y>617</y>
+      <y>656</y>
       <width>549</width>
       <height>202</height>
       <title>Post Mortem Pulse</title>
@@ -790,6 +802,58 @@ else:
           <visible>true</visible>
         </trace>
       </traces>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Vacuum Pumps State</name>
+      <y>290</y>
+      <width>551</width>
+      <height>32</height>
+      <style>2</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Vacuum_state</name>
+        <text>Vacuum pumps status:</text>
+        <x>16</x>
+        <y>6</y>
+        <width>143</width>
+        <height>16</height>
+        <foreground_color>
+          <color red="51" green="26" blue="128">
+          </color>
+        </foreground_color>
+        <auto_size>true</auto_size>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Last_intk_time_1</name>
+        <pv_name>$(CONDITIONING_IOC):PUMPS_STATUS</pv_name>
+        <x>164</x>
+        <y>7</y>
+        <width>153</width>
+        <height>16</height>
+        <font>
+          <font family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+          </color>
+        </background_color>
+        <scripts>
+          <script file="EmbeddedPy">
+            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+import time
+import math
+timestamp = PVUtil.getString(pvs[0])
+
+if timestamp=='0':
+	widget.setPropertyValue("text", "Nan")
+else:
+	date=time.ctime(float(timestamp))
+	widget.setPropertyValue("text", date)]]></text>
+            <pv_name>$(CONDITIONING_IOC):LAST_INTLK_DATETIME</pv_name>
+          </script>
+        </scripts>
+      </widget>
     </widget>
   </widget>
   <widget type="embedded" version="2.0.0">
